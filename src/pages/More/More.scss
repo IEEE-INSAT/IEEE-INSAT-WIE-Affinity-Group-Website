@@ -1,0 +1,16 @@
+.rubon-wrapper{
+position: relative;
+
+.container-rubon {
+    margin-top: 10vh;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    overflow: hidden;
+    min-width: 100vw;
+    position: absolute;
+    top: 0;
+}}

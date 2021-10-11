@@ -4,7 +4,7 @@
     height: fit-content;
     min-height: 150vh;
     transition: 1s all;
-    // background-color:#c9a0dc54;
+    background-color:#c9a0dc54;
 transform: none;
 display: flex;
 align-items: center;
@@ -23,6 +23,12 @@ flex-direction: column;
     position: sticky;
     background-color: rgb(255, 255, 255);
    
+
+    }
+    .testScroll {
+        // height: 40vh;
+    min-width: 100vw;
+    z-index: 2;
 
     }
 }

@@ -1,28 +1,29 @@
-.container-rubon {
-    margin-top: 10vh;
-    height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    min-width: 100vw;
+
 .rubon {
     width: 100%;
     height: fit-content;
-background-color: rgba(0, 0, 0, 0.623);
+background-color: rgb(105, 131, 187);
+border: 2px solid white;
     display: flex;
     align-items: center;
-    justify-content: center;  
-
-}
-        h1 {
+    justify-content: space-around;  
+    transition: 2s all;
+  h1 {
             color: white;
             margin: 5px;
            white-space: nowrap;
             font-size: 4vw;
             letter-spacing: 5px;
-            
+            display: flex;
+            align-items: center;
+            justify-content: space-around;  
             font-weight: 300;
             font-family: montreal;
         }
+}
+     
+.rubon3 {
+    z-index: -1;
+background-color: rgb(206, 135, 182);
+
 }

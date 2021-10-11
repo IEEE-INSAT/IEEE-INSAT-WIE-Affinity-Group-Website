@@ -8,6 +8,8 @@ import img4 from '../../teampics/pic5.png'
 import img5 from '../../teampics/pic4.png'
 import img6 from '../../teampics/pic6.jpg'
 import img7 from '../../teampics/pic7.jpg'
+import Rubon from '../../components/Rubon/Rubon'
+
 const Facts = () => {
 
 
@@ -38,14 +40,15 @@ const Facts = () => {
     },[])
     return (
         <div className="facts-container">
-            <div className="testScroll">
-                <h1>Check out our lovely Team</h1>
+          <div className="testScroll">
+            <Rubon text="Check Out our lovely team" deg={0} num={4}></Rubon>
+
                 </div>
             <div className="facts-wrapper">
-                
-                <Fall imgs ={[img1,img2,img3,img4]}></Fall>
-                <Fall imgs ={[img5,img6,img1,img7]}></Fall>
-                <Fall imgs ={[img6,img4,img5,img2]}></Fall>
+                  
+                <Fall imgs ={[img1,img2,img3,img4,img5,img2,img6,img5]}></Fall>
+                <Fall imgs ={[img5,img6,img1,img7,img1,img2,img3,img4]}></Fall>
+                <Fall imgs ={[img6,img4,img5,img2,img6,img1,img7,img2]}></Fall>
 
 
             </div>
