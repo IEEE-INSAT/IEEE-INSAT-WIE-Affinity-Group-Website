@@ -1,0 +1,109 @@
+.navbar {
+  
+    width: 100vw;
+    top: 0;
+    height: 80px;
+    background: #c9a0dc;
+    /* background: linear-gradient(87deg, rgb(169,81,135) 0%, rgb(169,81,135) */
+    /* 100%); */
+    position: sticky;
+    z-index: 5;
+    transition: 0.5s transform;
+/* background-image: url("https://www.transparenttextures.com/patterns/xv.png"); */
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+.nav-transform {
+ 
+  transform: translateY(-120px);
+
+}
+.navbar1 {
+  width: 100vw;
+    top: 100px;
+    height: 80px;
+    background-color: rgba(255, 184, 184, 0);
+    position: sticky;
+  transform: translateY(-100px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 6;
+
+
+}
+
+
+
+
+.navbar1::after {
+  display: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100px;
+  width: 90vw;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.575);
+}
+.logo {
+  font-family: second;
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+  z-index: 8;
+  justify-self: center;
+  /* margin:10%; */
+  cursor: pointer;
+  font-weight: 100;
+
+  /* margin: auto; */
+}
+ .navbar1 ul {
+   /* justify-self: flex-start; */
+   padding: 0;
+list-style-type: none;
+display: flex;
+justify-content:space-around;
+align-items: center;
+/* width:100%; */
+color: white;
+width: 60vw;
+height: 100%;
+}
+.maintitle span {font-family: classy;
+font-weight: bolder;
+color: rgb(255, 180, 209);}
+.navbar1 li {
+  /* margin-left:5vw ; */
+  cursor: pointer;
+  font-family: campton;
+    letter-spacing: 2px; 
+    color: white;
+    font-size: 1rem;
+
+}
+.navbar-item,.ul {
+  /* background-color: #ffffff; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.ul::after{
+  
+    content: '';
+width: 250%;
+height: 250%;
+position: absolute;
+top: var(--y);
+left: var(--x);
+transform: translate(-50%, -50%);
+opacity: 0;
+background: radial-gradient(circle closest-side, rgba(255, 195, 255, 0.527), transparent);
+transition: opacity 0.5s ease-out;
+ 
+}
+.ul:hover::after {
+  opacity: 1;
+}

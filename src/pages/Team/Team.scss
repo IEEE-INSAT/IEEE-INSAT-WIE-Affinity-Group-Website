@@ -1,0 +1,168 @@
+   
+@import url("https://fonts.googleapis.com/css?family=Oswald:300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+   
+.container-team {
+    svg {
+        position: absolute;
+        bottom: 0;
+        text {
+            z-index: -1;
+            transition: 1s all;
+        }
+    }
+    z-index: -2;
+    // position: absolute;
+    position: relative;
+    // color: aliceblue;
+    height: 100vh ;
+    width: 100vw;
+// position: fixed;
+// right: 0;
+// bottom: 0;
+// left: 0;
+// top: -80px;
+// object-fit: cover;
+// transform: translateY(-80px);
+background-color: rgb(208, 127, 255);
+
+.container {
+    z-index: -1;
+    position: fixed;
+display: grid;
+justify-content: center;
+align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 250vw;
+    height: 100%;
+    background-color: #ffffff;
+    transition: 1s all;
+    grid-template-rows: repeat(26,3.8%);
+    grid-template-columns: repeat(26,3.8%);
+}
+.text {
+        position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        transform: translate(20vh,7vh);
+        text-transform: uppercase;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,    Ubuntu, "Helvetica Neue", sans-serif;
+    font-size: 12em;
+    font-weight: 500;
+    letter-spacing: 50px;
+    word-break: none;
+    color: #757fb97a;
+    z-index: 3;
+
+
+}
+
+}
+.container-member1{
+    grid-area: 7/1/24/4;
+   width: 100%;
+    clip-path: polygon(25% 0, 85% 0, 60% 100%, 0 100%);
+
+
+   }
+   .container-member2{
+       margin: 0;
+    grid-area: 18/7/25/11;
+    width: 17vw;
+                    height: 17vw;
+    transform: translate(90px);
+    z-index: 2;
+
+    clip-path: polygon(25% 0, 85% 0, 60% 100%, 0 100%);
+}
+   .container-member3{
+    grid-area: 6/9/16/11;
+    width: 17vw;
+                    height: 17vw;
+    clip-path: polygon(25% 0, 85% 0, 60% 100%, 0 100%);
+
+   }
+   .container-member4{
+    grid-area: 18/12/25/14;
+    width: 17vw;
+    height: 17vw;
+    clip-path: polygon(25% 0, 85% 0, 60% 100%, 0 100%);
+
+   }
+   .name-member1 {
+    grid-area: 7/3/12/7;
+
+    }
+    
+   .name-member2 {
+    grid-area: 20/4/24/8;
+
+    }
+    .name-member3 {
+        grid-area: 7/10/12/14;
+    
+        }
+        .name-member4 {
+            grid-area: 21/13/21/17;
+        
+            }
+                 .container-member5{
+                grid-area: 9/14/12/16;
+                width: 17vw;
+                height: 17vw;
+                clip-path: polygon(25% 0, 85% 0, 60% 100%, 0 100%);
+            
+               }
+               .name-member5 {
+                grid-area: 7/15/12/19;
+            
+                }
+                .container-member6{
+                    grid-area: 18/17/25/21;
+
+                    width: 17vw;
+                    height: 17vw;
+                    clip-path: polygon(25% 0, 85% 0, 60% 100%, 0 100%);
+                
+                   }
+                   .name-member6 {
+                    grid-area: 20/18/22/22;
+                
+                    }
+                    .container-member8{
+                        grid-area: 9/23/12/25;
+    transform: translate(20px);
+                        width: 17vw;
+                        height: 17vw;
+                        clip-path: polygon(25% 0, 85% 0, 60% 100%, 0 100%);
+
+                       }
+                       .name-member8 {
+                        grid-area: 7/20/12/24;
+                    
+                        }
+                        .container-member7{
+                            grid-area: 20/23/23/27;
+        
+                            width: 17vw;
+                            height: 17vw;
+                            clip-path: polygon(25% 0, 85% 0, 60% 100%, 0 100%);
+
+                           }
+                           .name-member7 {
+                            grid-area: 20/24/25/28;
+
+                        
+                            }
+

@@ -1,0 +1,29 @@
+
+
+.member-pic {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: 2s all;
+    img.team-pic {
+        width: 100%;
+        height:100%;
+    }
+.after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    transition: 1s all;
+   
+
+
+}
+.move {
+    transform: translate(100%);
+}
+}
+

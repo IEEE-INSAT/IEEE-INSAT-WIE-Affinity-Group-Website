@@ -1,0 +1,28 @@
+.facts-container {
+    margin-top: 20vh;
+    width: 100vw;
+    height: fit-content;
+    min-height: 150vh;
+    transition: 1s all;
+    // background-color:#c9a0dc54;
+transform: none;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+flex-direction: column;
+
+    .facts-wrapper {
+        // opacity: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;   
+        width: 90%;
+        overflow: hidden;
+        height: 100vh;
+        top: 180px;
+    position: sticky;
+    background-color: rgb(255, 255, 255);
+   
+
+    }
+}

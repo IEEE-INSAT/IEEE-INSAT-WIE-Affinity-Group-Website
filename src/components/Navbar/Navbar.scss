@@ -1,0 +1,36 @@
+.navbar1 {
+    ul {
+        li {
+            z-index: 99;
+            position: relative;
+            overflow: hidden;
+            transition: 0.7s all;
+        }
+        li::after {
+            pointer-events: none;
+            transition: 0.7s all;
+
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 60%;
+            bottom: 0;
+           
+            border-bottom:2px solid rgb(255, 255, 255);
+            transform: translateY(3px);
+        }
+        li:hover::after {
+            transform: translateY(-10px);
+            // border-bottom:2px solid rgb(0, 0, 0);
+
+
+        }
+        li:hover {
+            transform: translateY(10px);
+        }
+    }
+}
+a {
+    text-decoration: none;
+    color: white;
+}

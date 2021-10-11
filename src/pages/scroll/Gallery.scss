@@ -1,0 +1,135 @@
+.big-container {
+    overflow: hidden;
+    height: 140vh;
+    background-color: #dcf4ff96;
+background-image: url("https://www.transparenttextures.com/patterns/paper-3.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    width: 100%;
+}
+.scroll-container {
+    margin-top: 50px;
+    // overflow-x: hidden;
+    position: relative;
+    height: 170vh;
+    width: 100%;
+    background-color: rgba(127, 255, 212, 0);
+    .section1 {
+    margin: 15vh;
+
+        position: absolute;
+        top: 200px;
+        left: 40vw;
+        transform: translateX(0vw) rotate(
+            26deg);
+    }
+    .section2 {
+        margin: 15vh;
+
+        position: absolute;
+        top: 200px;
+        left: 20vw;
+        transform: translateX(0vw) rotate(
+            -6deg);
+    }
+    .section3 {
+        position: absolute;
+        top: 00px;
+        left: -100px;
+        // right: 0;
+
+        transform: translateY(10vw) ;
+    }
+    .section4 {
+        position: absolute;
+        top: 80vh;
+        z-index: 3;
+        left: -10vw;
+        transform: translateX(0vw) rotate(344deg) ;
+    }
+    .section5 {
+        position: absolute;
+        top: 60vh;
+        z-index: 3;
+        right: -40vw;
+        transform: translateX(0vw) rotate(8deg) ;
+    } 
+     .section6 {
+        position: absolute;
+        top: 90vh;
+        z-index: 2;
+        right: -90vw;
+        transform: translateX(0vw) rotate(3deg) ;
+    }
+.item {
+    background-color: #E9D2F4;
+
+    white-space: nowrap;
+    width: 1800px;
+    height: 250px;
+    // position: absolute;
+    display: flex;
+    // justify-content: space-around;
+    align-items: center;
+}
+    .item1{ 
+    background-color: #f19d7900;
+    // transform: rotate(30deg);
+    // z-index: 2;
+  
+}
+.item2 {
+
+}
+.item3 {
+    color: #ffffff;
+    height: 130px;
+    width: 100%;
+    font-family: montreal;
+    font-size: 9vw;
+    overflow: hidden;
+    padding: 0 20px;
+
+}
+.item4 {
+    // height: 200px;
+    color: hsl(0, 0%, 100%);
+    height: 130px;
+    font-family: montreal;
+    font-size: 9vw;
+    overflow: hidden;
+    padding: 0 20px;
+    width: 1900px;
+
+}
+.item5 {
+    // height: 200px;
+    color: #ffffff;
+    height: 120px;
+    font-family: montreal;
+    font-size: 9vw;
+    overflow: hidden;
+    padding: 0 20px;
+    width: 1300px;
+
+}.item6 {
+    // height: 200px;
+    color: #ffffff;
+    height: 120px;
+    font-family: montreal;
+    font-size: 9vw;
+    overflow: hidden;
+    padding: 0 20px;
+    width: 2300px;
+
+}
+
+}
+.style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    span {
+        font-size: 40px;
+    }
+}

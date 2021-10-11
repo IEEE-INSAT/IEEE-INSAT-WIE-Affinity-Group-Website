@@ -1,0 +1,54 @@
+html, body {
+  position: relative;
+  /* height: 100vh; */
+  margin: 0;
+  /* overflow-x: hidden; */
+}
+@font-face {
+  font-family: nova;
+  src: url(./fonts/optima-nova-lt-light.otf);
+}
+@font-face {
+  font-family: second;
+  src: url(./fonts/bulgatti.ttf);
+}
+@font-face {
+  font-family: classy;
+  src: url(./fonts/marissa.ttf);
+}
+@font-face {
+  font-family: ivymode;
+  src: url(./fonts/ivymode.ttf);
+}
+@font-face {
+  font-family:avenir;
+  src: url(./fonts/avenir.otf);
+}
+@font-face {
+  font-family:montreal;
+  src: url(./fonts/montreal.otf);
+}
+@font-face {
+  font-family:violante;
+  src: url(./fonts/violante.ttf);
+}
+@font-face {
+  font-family:campton;
+  src: url(./fonts/NexaLight.otf);
+}
+@font-face {
+  font-family:dosis;
+  src: url(./fonts/Dosis-Light.ttf);
+}
+@font-face {
+  font-family:cutive;
+  src: url(./fonts/panterik.ttf)
+}
+@font-face {
+  font-family:space;
+  src: url(./fonts/space.ttf)
+}
+@font-face {
+  font-family:five;
+  src: url(./fonts/FiveYearsLater.ttf)
+}
