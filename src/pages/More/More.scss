@@ -1,21 +1,30 @@
-.rubon-wrapper{
-position: relative;
-margin-top: 10vh;
-height: 100vh;
-overflow: hidden;
-min-width: 100vw;
-top: 0;
-background-color: rgba(187, 127, 255, 0.979);
-transition: 1s all;
-.container-rubon {
-    overflow: hidden;
-   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    min-width: 100vw;
-    position: absolute;
-    top: 0;
-}}
+.relative{
+    margin-top: 20vh;
+    position: relative;
+    
+    .inside{
+        width: 100%;
+        height: 100%;
+    background-color: rgb(218, 173, 119);
+
+    }
+}
+.more-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(218, 173, 119);
+    position: relative;
+    z-index: 7;
+    transition: 1s all;
+
+    .rectangle {
+        z-index: -1;
+        height: 40vh;
+        width: 100%;
+        background-color: rgb(218, 173, 119);
+        position: absolute;
+        top: -20vh;
+        transform: rotate(-3deg);
+        transition: 1s all;
+    }
+}

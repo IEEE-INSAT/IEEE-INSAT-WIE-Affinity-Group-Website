@@ -52,8 +52,9 @@ const navbar1=document.getElementsByClassName("navbar1");
       <div className="transform">
             <Intro></Intro>
             {/* <Latest></Latest> */}
-            {/* <More></More> */}
+            
             <Showactivities></Showactivities>
+            <More></More>
             {/* <Facts></Facts> */}
             {/* <Footer></Footer> */}
             {/* <Gallery></Gallery> */}

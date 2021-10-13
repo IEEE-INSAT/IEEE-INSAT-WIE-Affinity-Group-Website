@@ -3,43 +3,47 @@ import './Rubon.scss'
 const Rubon = ({text, deg,num}) => {
 
     useEffect(()=> {
-        var x ="";
-        var y =0;
+        var lastscroll=0
+        var res;
+        var x =0;
         var done = true;
         var degs = [];
+        var res =""
+        
      const rubon = document.querySelector(`.rubon${num}`);
      const rubons = document.getElementsByClassName(`rubon`);
 
-     for (let i=1 ; i<rubons.length;i++)
-     {
-       x=  rubons[i].style.transform
-       degs.push(String(x));
-};
-console.log(degs[0])
+//      for (let i=1 ; i<rubons.length;i++)
+//      {
+//        x=  rubons[i].style.transform
+//        degs.push(String(x));
+// };
 
      window.addEventListener("scroll", ()=>{
-// console.log(rubons[1].getBoundingClientRect().y)
-         if(rubons[1].getBoundingClientRect().y<150){
-            if (done){
-y+=400;
+        // text=res;
+         if (rubons[0].getBoundingClientRect().bottom<700 && rubons[0].getBoundingClientRect().bottom>0){
+        if (lastscroll > rubons[0].getBoundingClientRect().y ){ 
 
-                for (let i=1 ; i<rubons.length;i++){
-                done= false;
-                   if(i%2 ===0){
-                rubons[i].style.transform=`translate(${y}px) ${degs[i-1]} `;
-                   }
-                  else {
-            rubons[i].style.transform=`translate(-${y}px) ${degs[i-1]} `;
+         x+=25;
+     rubon.style.transform =`translate(${x}px)`
+     if (num%2){
+     rubon.style.transform =`translate(-${x}px)`
+
+     }
+    }
+        else {
+            x-=25;
+     rubon.style.transform =`translate(${x}px)`
+     if (num%2){
+        rubon.style.transform =`translate(-${x}px)`
+   
         }
-                          setTimeout(() => {
-                             done=true;
-                                 }, 500);
-                                                 }
-                                                 };
-         
-     }})
 
-rubon.style.transform =`rotate(${deg}deg)`;
+        }}
+        lastscroll =rubons[0].getBoundingClientRect().y;
+
+})
+
     },[])
     return (
             <div className={`rubon${num} rubon`}>          <h1>{text}</h1>

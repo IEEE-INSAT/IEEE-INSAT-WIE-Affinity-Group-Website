@@ -1,7 +1,24 @@
-.container-activities {
-    margin-top: 20vh;
+.big-container-activities{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+margin-bottom: 10vh;
+
+.rubons {
+    margin-top: 5vh;
+    overflow: hidden;
     width: 100vw;
-    height: 270vh;
+    display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+}
+.container-activities {
+    margin-top: 0vh;
+    width: 100vw;
+    height: 250vh;
     min-height: 100vh;
     transition: 1s all;
     background-color: #c9a0dc54;
@@ -11,18 +28,19 @@
     flex-direction: column;
     position: relative;
     z-index: 5;
-    .wrapper-rectangle{
-        // overflow-x: hidden;
-    transition: 1s all;
-    position: absolute;
-    top: -30vh;
-    width: 100vw;
+    scroll-behavior: smooth;
+      .wrapper-rectangle{
+           // overflow-x: hidden;
+         transition: 1s all;
+         position: absolute;
+          top: -30vh;
+          width: 100vw;
 
         .rectangle {
-    top: 30vh;
-    right: 0;
-    transition: 1s all;
-margin: 0;
+         top: 30vh;
+         right: 0;
+         transition: 1s all;
+        margin: 0;
         width: 99vw;
         height: 100vh;
         z-index: 1;
@@ -32,7 +50,7 @@ margin: 0;
     
     .activities-wrapper {
     z-index: 5;
-
+    scroll-behavior: smooth;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -49,7 +67,7 @@ margin: 0;
                 align-items: center;
                 justify-content: center;
             h1 {
-                font-family: montreal;
+                font-family: campton;
                 flex-direction: column;
                 font-size: 4vw;
                 width: 90vw;
@@ -69,11 +87,14 @@ margin: 0;
             position: absolute;
             z-index: 5;
             margin: 50px;
+           
+            }
+           
             .element-activities{
-                transition: 0.5s all;
             position: absolute;
                      width: 50vw;
                     height: 30vw;
+                    border-radius: 20px;
                 }
                 .element1 {
                     top: 60vw;
@@ -101,4 +122,41 @@ margin: 0;
                 }
         }
     }
+    .svg {
+        position: absolute;
+        width: 12vw;
+        height: 12vw;
+    
+    }    .svg1 {
+            top: 60vw;
+            left: 10vw;
+        }
+        .svg2 {
+            top: 150vw;
+            right: 10vw;
+        }
+        .svg3 {
+            top: 100vw;
+        }
 }
+.link {
+position: absolute;
+bottom: 25vh;
+height: 7vw;
+width: fit-content;
+min-width: 20vw;
+background-color: rgba(0, 255, 255, 0);
+right: 5vw;
+overflow: hidden;
+z-index: 5;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px;
+    h2 {
+        transition: 1s all;
+   transform: translateY(20vw);
+   font-family: campton;
+   font-size: 2.5vw;
+   color: #ff9771c9;
+}}

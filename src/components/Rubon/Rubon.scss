@@ -1,8 +1,10 @@
 
 .rubon {
-    width: 100%;
+    width: 1000%;
     height: fit-content;
-background-color: #FF9671;
+    min-height: 14vh;
+// background-color: #ff9771c9;
+background-color: #f7bb90;
 border: 2px solid white;
     display: flex;
     align-items: center;
@@ -12,7 +14,7 @@ border: 2px solid white;
             color: white;
             margin: 5px;
            white-space: nowrap;
-            font-size: 4vw;
+            font-size: 4.7vw;
             letter-spacing: 5px;
             display: flex;
             align-items: center;
