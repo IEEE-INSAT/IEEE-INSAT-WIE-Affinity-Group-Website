@@ -4,6 +4,8 @@ const Rubon = ({text, deg,num}) => {
 
     useEffect(()=> {
         var x ="";
+        var y =0;
+        var done = true;
         var degs = [];
      const rubon = document.querySelector(`.rubon${num}`);
      const rubons = document.getElementsByClassName(`rubon`);
@@ -17,20 +19,25 @@ console.log(degs[0])
 
      window.addEventListener("scroll", ()=>{
 // console.log(rubons[1].getBoundingClientRect().y)
-
          if(rubons[1].getBoundingClientRect().y<150){
-             for (let i=1 ; i<rubons.length;i++)
-            {if 
-                (i%2 ===0){
-                rubons[i].style.transform=`translate(-200px) ${degs[i-1]} `;
-            }
-        else {
-            rubons[i].style.transform=`translate(200px) ${degs[i-1]} `;
+            if (done){
+y+=400;
 
+                for (let i=1 ; i<rubons.length;i++){
+                done= false;
+                   if(i%2 ===0){
+                rubons[i].style.transform=`translate(${y}px) ${degs[i-1]} `;
+                   }
+                  else {
+            rubons[i].style.transform=`translate(-${y}px) ${degs[i-1]} `;
         }
-        };
-         }
-     })
+                          setTimeout(() => {
+                             done=true;
+                                 }, 500);
+                                                 }
+                                                 };
+         
+     }})
 
 rubon.style.transform =`rotate(${deg}deg)`;
     },[])

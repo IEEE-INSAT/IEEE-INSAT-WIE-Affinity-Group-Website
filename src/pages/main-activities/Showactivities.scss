@@ -1,0 +1,104 @@
+.container-activities {
+    margin-top: 20vh;
+    width: 100vw;
+    height: 270vh;
+    min-height: 100vh;
+    transition: 1s all;
+    background-color: #c9a0dc54;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+    .wrapper-rectangle{
+        // overflow-x: hidden;
+    transition: 1s all;
+    position: absolute;
+    top: -30vh;
+    width: 100vw;
+
+        .rectangle {
+    top: 30vh;
+    right: 0;
+    transition: 1s all;
+margin: 0;
+        width: 99vw;
+        height: 100vh;
+        z-index: 1;
+        background-color: #e6a6ca;
+    }
+    }
+    
+    .activities-wrapper {
+    z-index: 5;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        overflow: hidden;
+        height: 100vh;
+        top: 30vh;
+        position: sticky;
+        background-color: #efc8de;
+        .title {
+            width: 100vw;
+            height: 100%;
+            display: flex;
+                align-items: center;
+                justify-content: center;
+            h1 {
+                font-family: montreal;
+                flex-direction: column;
+                font-size: 4vw;
+                width: 90vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 10px;
+                color: rgb(28, 27, 78);
+                div {
+                    white-space: nowrap;
+                }
+            }
+        }
+        .list {
+            width: 90%;
+            height: 100%;
+            position: absolute;
+            z-index: 5;
+            margin: 50px;
+            .element-activities{
+                transition: 0.5s all;
+            position: absolute;
+                     width: 50vw;
+                    height: 30vw;
+                }
+                .element1 {
+                    top: 60vw;
+
+                }
+                .element2{
+                    top: 100vw;
+                    right: 10vw;
+
+                }
+                .element3 {
+                    top: 155vw;
+                    left: 0vw;
+
+                }
+                .element4 {
+                    top: 180vw;
+                    right: 0vw;
+                   
+                }
+                .element5 {
+                    top: 220vw;
+                    right: 20vw;
+                
+                }
+        }
+    }
+}

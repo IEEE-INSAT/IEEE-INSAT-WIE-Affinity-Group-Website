@@ -1,15 +1,20 @@
 .rubon-wrapper{
 position: relative;
-
+margin-top: 10vh;
+height: 100vh;
+overflow: hidden;
+min-width: 100vw;
+top: 0;
+background-color: rgba(187, 127, 255, 0.979);
+transition: 1s all;
 .container-rubon {
-    margin-top: 10vh;
-    height: 40vh;
+    overflow: hidden;
+   
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: fit-content;
-    overflow: hidden;
     min-width: 100vw;
     position: absolute;
     top: 0;

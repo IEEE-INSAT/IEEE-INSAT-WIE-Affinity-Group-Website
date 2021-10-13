@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './More.scss'
 import Rubon from '../../components/Rubon/Rubon'
 const More = () => {
+
+    useEffect(()=> {
+            const wrapper = document.getElementsByClassName("rubon-wrapper");
+    window.addEventListener("scroll",()=> {
+        if (wrapper[0].getBoundingClientRect().y<500){
+            wrapper[0].style.transform="translateY(-100px)"
+            console.log("true")
+        }
+    })
+    })
+
     return (
         <div className="rubon-wrapper">
 

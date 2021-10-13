@@ -2,7 +2,6 @@ html, body {
     height: 100%;
 }
 .transform  {
-    
     transition: 1s transform ,
     2s background-color;
     display: flex;
@@ -12,7 +11,7 @@ html, body {
     background-color: #ffffff;
     position: relative;
     flex-direction: column;
-    padding: 10px;
+    /* padding: 10px; */
     /* height:fit-content; */
 /* background-image: url("https://www.transparenttextures.com/patterns/xv.png"); */
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */

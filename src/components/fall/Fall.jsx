@@ -26,8 +26,8 @@ window.addEventListener("scroll",()=> {
                 
             done=false;
         if (lastscroll > test[0].getBoundingClientRect().y ){ 
-           x+=200
-           y+=200
+           x+=100
+           y+=100
 
             for (let i=0;i<3;i++){
               if (i==0 || i==2){
@@ -42,8 +42,8 @@ window.addEventListener("scroll",()=> {
                     },300)}
         else {
 
-       y-=200;
-       x-=200;
+       y-=100;
+       x-=100;
             for (let i=0;i<3;i++){
                  if (i==0 || i==2)
                     {

@@ -6,9 +6,10 @@ import Intro from '../first/Intro'
 import HorizontalScroll from 'react-scroll-horizontal'
 import  Gallery from '../scroll/Gallery'
 import Footer from '../footer/Footer'
-import Latest from '../latest/Latest'
+import Latest from '../Carousel/Latest'
 import Facts from '../facts/Facts'
 import More from '../More/More'
+import Showactivities from '../main-activities/Showactivities'
 const Aboutus = () => {
 
 
@@ -50,9 +51,10 @@ const navbar1=document.getElementsByClassName("navbar1");
         <div>
       <div className="transform">
             <Intro></Intro>
-            <Latest></Latest>
-            <Facts></Facts>
-            <More></More>
+            {/* <Latest></Latest> */}
+            {/* <More></More> */}
+            <Showactivities></Showactivities>
+            {/* <Facts></Facts> */}
             {/* <Footer></Footer> */}
             {/* <Gallery></Gallery> */}
 

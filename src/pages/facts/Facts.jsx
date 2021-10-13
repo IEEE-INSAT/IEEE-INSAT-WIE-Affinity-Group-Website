@@ -41,7 +41,7 @@ const Facts = () => {
     return (
         <div className="facts-container">
           <div className="testScroll">
-            <Rubon text="Check Out our lovely team" deg={0} num={4}></Rubon>
+            {/* <Rubon text="Check Out our lovely team" deg={0} num={4}></Rubon> */}
 
                 </div>
             <div className="facts-wrapper">
