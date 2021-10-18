@@ -1,5 +1,5 @@
 .relative{
-    margin-top: 20vh;
+    margin-top: 0vh;
     position: relative;
     
     .inside{
@@ -11,11 +11,45 @@
 }
 .more-container{
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     background-color: rgb(218, 173, 119);
     position: relative;
     z-index: 7;
     transition: 1s all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+.container-container {
+    height: 70vh;
+        width: 80vw;
+        overflow: hidden;
+
+}
+    .slider-container {
+        background-color: rgba(114, 167, 167, 0);
+        height: 70vh;
+        width: fit-content;
+        display: inline-flex;
+        align-items: center;
+        scrollbar-width: none;
+        transform: translateX(0);
+        will-change: transform;
+        transition: transform 0.3s ease-out;
+        cursor: grab;
+        .slide {
+            margin:0 0 0 2rem;
+            height: 70vh;
+            min-width: 20vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+             background-color: palevioletred;
+
+        }
+    }
+    
+
+
 
     .rectangle {
         z-index: -1;
@@ -27,4 +61,7 @@
         transform: rotate(-3deg);
         transition: 1s all;
     }
+}
+.slider-container.grabbing {
+    cursor: grabbing;
 }

@@ -1,57 +1,100 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import Slide from './Slide/Slide'
 import './Slider.scss'
-const Slider = ({change}) => {
-  const [pics,setPics]=useState(["pic1-slide pic-slide","pic-slide pic2-slide","pic-slide pic3-slide"])
+const Slider = () => {
+  useEffect(()=> {
+    const slider = document.querySelector('.slider-container'),
+    slides = Array.from(document.querySelectorAll('.slide'))
+    let isDragging = false,
+    startPos = 0,
+    currentTranslate = 0,
+     prevTranslate = 0,
+    animationID = 0;
+    var done  = false ; 
+   var  test=0;
+ 
+    slider.addEventListener('touchstart', touchStart())
+    slider.addEventListener('touchend', touchEnd)
+    slider.addEventListener('touchmove', touchMove)
+    // mouse events
 
-    useEffect(()=> {
-var i =1;
-var n=80;
-var x,y,z;
-      var pic1 = document.querySelector(".pic1-slide")
-      var pic2 = document.querySelector(".pic2-slide")
-      var pic3 = document.querySelector(".pic3-slide")
-      setInterval(()=> {
-    if(i==0){
-      change("Summer School")
-      x=0;
-      y=0;
-      z=0;
+    slider.addEventListener('mousedown', touchStart())
+    slider.addEventListener('mouseup', touchEnd)
+    slider.addEventListener('mousemove', touchMove)
+    slider.addEventListener('mouseleave', touchEnd)
+
+
+  function touchStart() {
+    return function (event) {
+      console.log (event)
+      startPos = getPositionX(event)
+      isDragging = true
+      animationID = requestAnimationFrame(animation)
+      slider.classList.add('grabbing')
     }
-    if(i==1){
-      change("event 2")
+  }
 
-      x=-n;
-      y=-n;
-      z=-n;
-    } if(i==2){
-      change("event 3")
+  function getPositionX(event) {
+    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX
+  }
 
-      x=n;
-      y=n*2;
-      z=n*3;
-    }
-    i++;
-    if (i>2){i=0}
-
+  function animation() {
+    setSliderPosition()
+    if (isDragging) requestAnimationFrame(animation)
+  }
+  function setSliderPosition() {
+    slider.style.transform = `translateX(${currentTranslate}px)`
+  }
   
-          pic1.style.setProperty( '--x', x + 'vw' );
-    pic2.style.setProperty( '--y', y + 'vw' );
-    pic3.style.setProperty( '--z',z + 'vw' );
-      },5000)
+function touchMove(event) {
+  if (isDragging) {
+    const currentPosition = getPositionX(event)
+    currentTranslate = prevTranslate + currentPosition - startPos;
+    if (currentTranslate>0)currentTranslate=0;
 
-    
-    }, [])
-
-  var items =[];
-
-    for (const index of pics) {
-        items.push(<div key={index} className={index}></div>)
+    if(slides[slides.length-1].getBoundingClientRect().x<500) {
+      if(!done){
+           done=true;
+      test = currentTranslate
       }
-    return (
-        <div className="slide">
-          {items}
-        </div>
-    )
+   else if (currentTranslate<test) {currentTranslate=test;}
+    }
+console.log( "current translate :", currentTranslate )
+     }
+}
+
+function touchEnd() {
+  cancelAnimationFrame(animationID)
+  isDragging = false
+  console.log("done")
+  prevTranslate = currentTranslate
+
+  setPositionByIndex()
+  slider.classList.remove('grabbing')
+}
+
+
+function setPositionByIndex() {
+  setSliderPosition()
+}
+  },[])
+  return (
+    <div className="container-container">
+    <div className="slider-container">
+    {/* <Slide></Slide>
+    <Slide></Slide>
+    <Slide></Slide>
+    <Slide></Slide>
+    <Slide></Slide>
+    <Slide></Slide> */}
+<div className="slide"></div>
+<div className="slide"></div>
+<div className="slide"></div>
+<div className="slide"></div>
+<div className="slide"></div>
+
+</div></div>
+  )
 }
 
 export default Slider

@@ -8,7 +8,7 @@
     /* 100%); */
     position: sticky;
     z-index: 5;
-    transition: 0.5s transform;
+    transition: 1s all;
 /* background-image: url("https://www.transparenttextures.com/patterns/xv.png"); */
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }

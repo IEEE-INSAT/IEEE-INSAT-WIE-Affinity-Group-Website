@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import './More.scss'
 import Rubon from '../../components/Rubon/Rubon'
+import Slider from '../../components/slider/Slider'
 const More = () => {
     useEffect(()=> {
         const container = document.getElementsByClassName("more-container");
@@ -18,14 +19,14 @@ const More = () => {
 
             if(container[0].getBoundingClientRect().bottom<1500){ 
                 if (container[0].getBoundingClientRect().bottom<lastscroll){
-                r+=0.2;
+                r+=0.25;
                 t+=20;
                 rectangle[0].style.transform=`rotate(-${r}deg)`;
                 container[0].style.transform=`translateY(-${t}px)`;
     
                     }    else {
 
-                        r-=0.2;
+                        r-=0.3;
                         t-=20;
                         rectangle[0].style.transform=`rotate(-${r}deg)`;
                         container[0].style.transform=`translateY(-${t}px)`;
@@ -43,6 +44,7 @@ const More = () => {
 <div className="relative">
     <div className="inside"></div>
             <div className="more-container">
+              <Slider></Slider>
              <div className="rectangle"></div>
             </div>
 </div>
