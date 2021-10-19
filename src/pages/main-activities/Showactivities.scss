@@ -87,6 +87,7 @@ flex-direction: column;
             position: absolute;
             z-index: 5;
             margin: 50px;
+            transition: 1s transform;
            
             }
            
@@ -95,6 +96,8 @@ flex-direction: column;
                      width: 50vw;
                     height: 30vw;
                     border-radius: 20px;
+    transition: 0.3s top;
+
                 }
                 .element1 {
                     top: 60vw;
