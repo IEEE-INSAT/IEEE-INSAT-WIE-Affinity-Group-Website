@@ -24,7 +24,7 @@ const Rubon = ({text, deg,num}) => {
          if (rubons[0].getBoundingClientRect().bottom<700 && rubons[0].getBoundingClientRect().bottom>0){
         if (lastscroll > rubons[0].getBoundingClientRect().y ){ 
 
-         x+=25;
+         x+=10;
      rubon.style.transform =`translate(${x}px)`
      if (num%2){
      rubon.style.transform =`translate(-${x}px)`

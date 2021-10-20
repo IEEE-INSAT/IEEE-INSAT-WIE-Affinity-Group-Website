@@ -87,11 +87,14 @@ function setPositionByIndex() {
     <Slide></Slide>
     <Slide></Slide>
     <Slide></Slide> */}
-<div className="slide"></div>
-<div className="slide"></div>
-<div className="slide"></div>
-<div className="slide"></div>
-<div className="slide"></div>
+
+<Slide></Slide>
+<Slide></Slide>
+<Slide></Slide>
+<Slide></Slide>
+<Slide></Slide>
+<Slide></Slide>
+
 
 </div></div>
   )

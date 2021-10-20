@@ -99,7 +99,7 @@ const Showactivities = () => {
             list[4].style.top=`${b}vw`;
             svgs[2].style.top=`${y+30}vw`;
 
-            svgs[1].style.top=`${x+40}vw`;
+            svgs[1].style.top=`${x+40}vw`
 
 
             // if(x>80)x=80;
@@ -109,7 +109,9 @@ const Showactivities = () => {
          }
          if (list[4].getBoundingClientRect().bottom<0){
             link[0].style.transform='translate(0)';
-
+         }
+         else if (list[4].getBoundingClientRect().bottom>-150){
+            link[0].style.transform='translateY(20vw)';
 
          }
          lastscroll=containerActivities[0].getBoundingClientRect().y;
@@ -129,6 +131,10 @@ return (
     <div className="activities-wrapper">
         <div className="title">
             <h1> <div> Dsicover the amazing world </div> <div>of WIE threw OUR amazing activities</div> </h1>
+            <div className="link">
+                <h2 className="element6"> get to know more ...</h2>
+
+            </div>
         </div>
         <div className="list">
             <img src={pic1} className="element-activities element1" />
@@ -146,10 +152,7 @@ return (
         </div>
      
     </div>
-   <div className="link">
-                <h2 className="element6"> get to know more ...</h2>
-
-            </div>
+  
 </div>
 </div>
 )

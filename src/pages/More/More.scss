@@ -19,6 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 1s all;
 .container-container {
     height: 70vh;
         width: 80vw;
@@ -27,7 +28,7 @@
 }
     .slider-container {
         background-color: rgba(114, 167, 167, 0);
-        height: 70vh;
+        height: 90vh;
         width: fit-content;
         display: inline-flex;
         align-items: center;
@@ -43,7 +44,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-             background-color: palevioletred;
+             background-color: rgb(218, 167, 184);
 
         }
     }

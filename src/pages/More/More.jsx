@@ -6,7 +6,7 @@ const More = () => {
     useEffect(()=> {
         const container = document.getElementsByClassName("more-container");
         const banner = document.getElementsByClassName("banner");
-    
+        const slider = document.getElementsByClassName("slider-container");
         
         const rectangle =document.getElementsByClassName("rectangle");
         var r = 2;
@@ -14,20 +14,30 @@ const More = () => {
       var  lastscroll=0; 
 
         window.addEventListener("scroll", ()=> {
-            console.log(container[0].getBoundingClientRect().bottom)
            
 
-            if(container[0].getBoundingClientRect().bottom<1500){ 
+            if(container[0].getBoundingClientRect().bottom<1900){ 
                 if (container[0].getBoundingClientRect().bottom<lastscroll){
                 r+=0.25;
+                    if (slider[0].getBoundingClientRect().top<91)
+                    {
+                        t+=5;
+                    }
+                    else
                 t+=20;
                 rectangle[0].style.transform=`rotate(-${r}deg)`;
                 container[0].style.transform=`translateY(-${t}px)`;
+
     
                     }    else {
 
                         r-=0.3;
-                        t-=20;
+                        if (slider[0].getBoundingClientRect().top<91)
+                        {
+                            t-=5;
+                        }
+                        else
+                    t-=20;
                         rectangle[0].style.transform=`rotate(-${r}deg)`;
                         container[0].style.transform=`translateY(-${t}px)`;
             }

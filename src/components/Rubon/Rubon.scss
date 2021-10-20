@@ -2,7 +2,7 @@
 .rubon {
     width: 1000%;
     height: fit-content;
-    min-height: 14vh;
+    min-height: 9vh;
 // background-color: #ff9771c9;
 background-color: #f7bb90;
 border: 2px solid white;
@@ -14,13 +14,14 @@ border: 2px solid white;
             color: white;
             margin: 5px;
            white-space: nowrap;
-            font-size: 4.7vw;
+            font-size: 3.8vw;
             letter-spacing: 5px;
             display: flex;
             align-items: center;
             justify-content: space-around;  
-            font-weight: 300;
-            font-family: montreal;
+            font-weight: 500;
+            font-family: campton;
+
         }
 }
      
