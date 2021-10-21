@@ -31,6 +31,11 @@ const Slider = () => {
       isDragging = true
       animationID = requestAnimationFrame(animation)
       slider.classList.add('grabbing')
+
+      for (let i =0 ; i< slides.length ; i++) {
+        if (i%2) slides[i].classList.add("up");
+        else slides[i].classList.add("down");
+              }
     }
   }
 
@@ -70,7 +75,11 @@ function touchEnd() {
   prevTranslate = currentTranslate
 
   setPositionByIndex()
-  slider.classList.remove('grabbing')
+  slider.classList.remove('grabbing');
+  for (let i =0 ; i< slides.length ; i++) {
+    if (i%2) slides[i].classList.remove("up");
+    else slides[i].classList.remove("down");
+          }
 }
 
 

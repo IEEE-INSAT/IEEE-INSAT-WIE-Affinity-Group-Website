@@ -54,7 +54,9 @@ const More = () => {
 <div className="relative">
     <div className="inside"></div>
             <div className="more-container">
+                <div className="wrapper-container">
               <Slider></Slider>
+              </div>
              <div className="rectangle"></div>
             </div>
 </div>

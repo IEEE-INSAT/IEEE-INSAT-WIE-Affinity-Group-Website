@@ -1,6 +1,40 @@
 .slide.up {
-
+transform: translateY(50px);
 }
 .slide.down {
+transform: translateY(-50px);
     
+}
+.slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    color: rgb(250, 210, 255);
+    img {
+        top: -5vh;
+        position: absolute;
+        border-radius: 50%;
+    width: 15vw;
+    height: 15vw;
+ }
+ .title {
+    h1 {
+        font-size: 2.5rem;
+    }
+ }
+ .position {
+     p {
+         font-size: 1.5rem;
+         margin: 0;
+     }
+ }
+ .quote {
+     margin:0 15px;
+     
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
 }
