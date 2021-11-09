@@ -13,40 +13,6 @@ import Showactivities from '../main-activities/Showactivities'
 const Aboutus = () => {
 
 
-
-
-
-    const scroll =document.getElementsByClassName("transform");
-const navbar =document.getElementsByClassName("nav-transform");
-const pic =document.getElementsByClassName("pic1");
-const navbar1=document.getElementsByClassName("navbar1");
-
-    window.addEventListener('scroll', function() {
-
-        var value =100+this.window.scrollY
-
-        // scroll[0].style.transform=`translateY(-${value}px)`;
-   
-        if (this.window.scrollY==0){
-            navbar[0].style.transform='translateY(-100px)';
-        scroll[0].style.transform=`translateY(0px)`;
-//  navbar1[0].style.transform='translateY(-100px)';
-            }
-        else{
-            navbar[0].style.transform=`translateY(0)`;
-        scroll[0].style.transform=`translateY(-200px)`;
-//  navbar1[0].style.transform='translateY(-100px)';
-
-        // setTimeout(()=> {
-        //     navbar[0].style.transform='translateY(-100px)';
-        //     navbar1[0].style.transform='translateY(-200px)';
-        // },10000)
-
-        }
-      
-    })
-    
-
     return (
         <div>
       <div className="transform">
@@ -56,7 +22,7 @@ const navbar1=document.getElementsByClassName("navbar1");
             <Showactivities></Showactivities>
             <More></More>
             {/* <Facts></Facts> */}
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
             {/* <Gallery></Gallery> */}
 
 

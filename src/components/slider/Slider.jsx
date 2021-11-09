@@ -71,7 +71,6 @@ console.log( "current translate :", currentTranslate )
 function touchEnd() {
   cancelAnimationFrame(animationID)
   isDragging = false
-  console.log("done")
   prevTranslate = currentTranslate
 
   setPositionByIndex()

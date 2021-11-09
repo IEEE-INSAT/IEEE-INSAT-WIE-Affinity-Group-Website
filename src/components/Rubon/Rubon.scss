@@ -4,12 +4,12 @@
     height: fit-content;
     min-height: 9vh;
 // background-color: #ff9771c9;
-background-color: #f7bb90;
+background-color: #99b2ddbe;
 border: 2px solid white;
     display: flex;
     align-items: center;
     justify-content: space-around;  
-    transition: 2s all;
+    transition: 0.5s all;
   h1 {
             color: white;
             margin: 5px;
@@ -30,3 +30,11 @@ border: 2px solid white;
 background-color: #D65DB1;
 
 }
+
+@media screen and (max-width : 600px) {
+    .rubon {
+        min-height: 10vh;
+        h1 {
+font-size: 7vw;
+        }}
+ }

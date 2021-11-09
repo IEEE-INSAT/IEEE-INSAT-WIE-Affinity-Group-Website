@@ -13,6 +13,34 @@ import {
 
 const Navbar = () => {
 
+
+
+
+
+  const scroll =document.getElementsByClassName("transform");
+  const navbar =document.getElementsByClassName("nav-transform");
+  const pic =document.getElementsByClassName("pic1");
+  const navbar1=document.getElementsByClassName("navbar1");
+  
+      window.addEventListener('scroll', function() {
+  
+          var value =100+this.window.scrollY
+  
+     
+          if (this.window.scrollY==0){
+              navbar[0].style.transform='translateY(-100px)';
+          scroll[0].style.transform=`translateY(0px)`;
+              }
+          else{
+              navbar[0].style.transform=`translateY(0)`;
+          scroll[0].style.transform=`translateY(-200px)`;
+  
+       
+  
+          }
+        
+      })
+      
 //   useEffect(()=>{
 //      var items= document.querySelectorAll(".ul")
 //   items.forEach((item)=> {

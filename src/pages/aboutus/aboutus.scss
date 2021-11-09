@@ -1,10 +1,12 @@
     .container-cards {
         position: relative;
     height: 350px;
-    width: 100vw;
+    width: 100%;
 
     .card {
-    width: 600px;
+    width: 43vw;
+    min-width: 600px;
+    max-width: 780px;
     height: 300px;
     margin: 20px;
     
@@ -27,7 +29,8 @@
     svg{
     position: absolute;
     top: 3vh;
-    width: 220px;
+    width: 25vw;
+    max-width: 220px;
     height: 220px;
     left:0px;
 //  transform: translateY(-15px);
@@ -175,3 +178,111 @@ svg#a3{
     }
 
 }
+
+
+@media screen and (max-width : 600px) {
+    .pic1 {
+        display: none;
+    }
+    .transform h1 {
+        font-size: 2rem;
+        white-space: nowrap;
+        width: fit-content;
+    }
+    .firstcontainer .container  {
+     width: 100%;
+     justify-content: center;
+     align-items: center;
+ }
+ .firstcontainer .container .text {
+     max-width: 100%;
+ }
+ .firstcontainer {
+     .container {    
+     width:100%;
+     margin: 0 5px;
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     /* height: 100%; */
+     /* background-color: #a95187; */
+ 
+     .titles {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width:100%;
+     h1 {
+         min-width: 100%;
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         justify-content: center;
+     }
+ }}}
+ .transform p {
+     max-width: 90vw;
+ }
+  
+ }
+ 
+@media screen and (max-width : 700px) {
+    .container-cards {
+        height: 32vh;
+        
+        .card {
+        width: 43vw;
+        min-width: 95vw;
+        max-width: 90vw;
+    height: 30vh;
+
+    }
+    h1 {
+        width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+        font-size: 7.5vw; 
+        margin-bottom: 0;
+        white-space: nowrap;
+        margin: 20px 0 0 0 ;
+    }
+    .card1, .card2, .card3{
+        .text {
+            min-width: 90%;
+          font-size: 2.7vw;
+          z-index: 3;
+        }
+    .flex {
+        height: fit-content;
+    }
+        svg{
+            position: absolute;
+            top: 3vh;
+            opacity: 0.5;
+            width: 35vw;
+            max-width: 220px;
+            height: 220px;
+            left:0px;
+        //  transform: translateY(-15px);
+            z-index: 2;
+            
+        }
+        svg#a3{
+            position: absolute;
+            top: 25px;
+            width: 220px;
+            height: 220px;
+         left: 45%;
+
+        
+            z-index: 2;
+        
+        }
+        svg#a2{
+         left: 20%;
+         top: 0;
+        
+        }
+    }
+ }}

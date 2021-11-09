@@ -12,6 +12,7 @@ margin: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    max-width:100%; 
     top: 0;
     object-fit: cover;
   
@@ -60,6 +61,8 @@ flex-direction: column;
  justify-content: center;
  align-items: center; 
  height: 100vh;
+ max-width:100%; 
+ width: 100%;
 }
 .overlay {
     display: flex;
@@ -73,4 +76,14 @@ flex-direction: column;
     top: 0;
     height: 200vh;
         background-color: #00000088;
+}
+#myVideo {
+    max-width:100%; 
+    width: 100%;
+}
+@media only screen and (max-width: 600px) {
+    .container-main .maintitle {
+        font-size: 2.5rem;
+      
+    }
 }

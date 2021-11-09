@@ -134,7 +134,7 @@ flex-direction: column;
 }
 
 .container-big {
-    width: 100vw;
+    width: 100%;
     margin-top: 100px;
     /* margin: 100px 10vh 0 10vh; */
     /* height: 2000px; */
@@ -148,7 +148,7 @@ flex-direction: column;
  
 }
 .firstcontainer {
-    width: 100vw;
+    width:100%;
     margin: 0 5px;
     display: flex;
     justify-content: space-evenly;
@@ -183,6 +183,9 @@ max-height: 400px;
 
 
 
+@media only screen and (max-width: 400px) {
+  
+  }
 
 
 
@@ -202,10 +205,3 @@ max-height: 400px;
 
 
 
-
-
-@media screen and (max-width : 1030px) {
-    .transform h1 {
-        /* font-size: 5vw; */
-    } 
-}

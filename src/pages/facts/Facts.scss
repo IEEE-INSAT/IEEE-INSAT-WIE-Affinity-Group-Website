@@ -1,6 +1,6 @@
 .facts-container {
     margin-top: 20vh;
-    width: 100vw;
+    width: 100%;
     height: fit-content;
     min-height: 50vh;
     transition: 1s all;
@@ -27,7 +27,7 @@ flex-direction: column;
     }
     .testScroll {
         // height: 40vh;
-    min-width: 100vw;
+    min-width: 100%;
     z-index: 2;
 
     }

@@ -1,9 +1,10 @@
 .footer {
-    width: 100vw;
+    width: 100%;
     position: absolute;
-    height: 400px;
+    height: 80vh;
     background-color: black;
     transform: translateY(400px);
     transition: 1s all;
     bottom: 0;
+    z-index: 9;
 }

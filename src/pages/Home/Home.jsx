@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Main from '../Main'
+import Main from '../Main/Main'
 import Aboutus from '../aboutus/Aboutus'
 const Home = () => {
     const body= document.querySelector("body")

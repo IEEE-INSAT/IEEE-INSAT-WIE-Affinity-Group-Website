@@ -18,11 +18,15 @@ const Showactivities = () => {
         const list = document.getElementsByClassName("element-activities");
         const link = document.getElementsByClassName("element6");
         const svgs = document.getElementsByClassName("svg");
+        const vid = document.getElementById("myVideo");
 
         const containerActivities = document.getElementsByClassName("container-activities");
         // const rectangle = document.getElementsByClassName("rectangle");
         var r = 0
       var  lastscroll=0; var lastscroll1=0;
+      var  lastvalue=0; var currentvalue=0;
+      var offset=0;
+
         var x = 60;
         var y=100;
         var t =0;
@@ -50,31 +54,30 @@ const Showactivities = () => {
 
         
         // }
-
-   if (done){
-                    done=false   
+if (containerActivities[0].getBoundingClientRect().top && done) {
+    offset=document.documentElement.scrollTop -100;
+    done=false;
+}
+  
                     if (containerActivities[0].getBoundingClientRect().y<0 && containerActivities[0].getBoundingClientRect().y>-1000){
            
-            if (containerActivities[0].getBoundingClientRect().y<lastscroll){
-          
+          currentvalue = document.documentElement.scrollTop -offset ;
+          console.log('hahahahah' ,list[4].getBoundingClientRect().y)
                 
-                   x-=2;
-                   y-=2;
-                   z-=2;
-                   a-=3;
-                   b-=3
+                   x+=(currentvalue-lastvalue)*2;
+                   y+=(currentvalue-lastvalue)*4;
+                   z+=(currentvalue-lastvalue)*3.5;
+                   a+=(currentvalue-lastvalue)*4.5;
+                   b+=(currentvalue-lastvalue)*4.5;
                   
-            list[0].style.top=`${x}vw`;
-            // svgs[0].style.top=`${x}vw`;
-
-            list[1].style.top=`${y}vw`;
-            svgs[2].style.top=`${y+30}vw`;
-
-            svgs[1].style.top=`${x+40}vw`;
-
-            list[2].style.top=`${z}vw`;
-            list[3].style.top=`${a}vw`;
-            list[4].style.top=`${b}vw`;
+            list[0].style.transform=`translateY(-${x}px)`;
+            // svgs[0].style.top=`${x}px`;
+            list[1].style.transform=`translateY(-${y}px)`;
+            svgs[2].style.transform=`translateY(-${y+30}px)`;
+            svgs[1].style.transform=`translateY(-${x+40}px)`;
+            list[2].style.transform=`translateY(-${z}px)`;
+            list[3].style.transform=`translateY(-${a}px)`;
+            list[4].style.transform=`translateY(-${b}px)`;
 
         
 
@@ -83,44 +86,20 @@ const Showactivities = () => {
             // if(y<-20)y=-20;
 
             }
-         else {
-              x+=2;
-              y+=2;
-              a+=3;
-              z+=2;
-              b+=3
-
-            list[0].style.top=`${x}vw`;
-            // svgs[0].style.top=`${x}vw`;
-            list[1].style.top=`${y}vw`;
-            // list[2].style.transform=`translateY(${z}vw)`;
-            list[2].style.top=`${z}vw`;
-            list[3].style.top=`${a}vw`;
-            list[4].style.top=`${b}vw`;
-            svgs[2].style.top=`${y+30}vw`;
-
-            svgs[1].style.top=`${x+40}vw`
-
-
-            // if(x>80)x=80;
-            // if(y>100)y=100;
-
-
-         }
-         if (list[4].getBoundingClientRect().bottom<0){
+         
+         if (list[4].getBoundingClientRect().y<100){
             link[0].style.transform='translate(0)';
          }
-         else if (list[4].getBoundingClientRect().bottom>-150){
+         else{
             link[0].style.transform='translateY(20vw)';
 
          }
          lastscroll=containerActivities[0].getBoundingClientRect().y;
-         } 
+         lastvalue=document.documentElement.scrollTop -offset;
+         
        
-        } setTimeout(() => {
-            done=true;
-        }, 0);})
-    },[])
+      
+        })},[])
 return (
     <div className="big-container-activities">
     <div className="rubons">

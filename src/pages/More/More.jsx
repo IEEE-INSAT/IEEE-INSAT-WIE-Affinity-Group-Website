@@ -14,9 +14,10 @@ const More = () => {
       var  lastscroll=0; 
 
         window.addEventListener("scroll", ()=> {
-           
+            if (slider[0].getBoundingClientRect().y>300){
+           console.log(slider[0].getBoundingClientRect().y);
 
-            if(container[0].getBoundingClientRect().bottom<1900){ 
+            if(container[0].getBoundingClientRect().bottom<1800){ 
                 if (container[0].getBoundingClientRect().bottom<lastscroll){
                 r+=0.25;
                     if (slider[0].getBoundingClientRect().top<91)
@@ -43,7 +44,7 @@ const More = () => {
             }
             lastscroll=container[0].getBoundingClientRect().bottom;
         }
-      
+    }
         },[])
 
     })
@@ -54,10 +55,11 @@ const More = () => {
 <div className="relative">
     <div className="inside"></div>
             <div className="more-container">
+             <div className="rectangle"></div>
+
                 <div className="wrapper-container">
               <Slider></Slider>
               </div>
-             <div className="rectangle"></div>
             </div>
 </div>
 
