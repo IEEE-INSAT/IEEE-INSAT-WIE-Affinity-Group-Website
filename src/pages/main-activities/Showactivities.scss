@@ -3,8 +3,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-margin-bottom: 10vh;
-
+width: 100%;
 .rubons {
     margin-top: 5vh;
     overflow: hidden;
@@ -100,30 +99,7 @@ flex-direction: column;
     transition: 0.5s all;
 
                 }
-                .element1 {
-                    top: 60vw;
-
-                }
-                .element2{
-                    top: 100vw;
-                    right: 10vw;
-
-                }
-                .element3 {
-                    top: 155vw;
-                    left: 0vw;
-
-                }
-                .element4 {
-                    top: 180vw;
-                    right: 0vw;
-                   
-                }
-                .element5 {
-                    top: 220vw;
-                    right: 20vw;
                 
-                }
         }
     }
     .svg {
@@ -166,3 +142,7 @@ padding: 10px;
    font-size: 2.5vw;
    color: #ff9771c9;
 }}
+
+.element5 {
+    display: none;
+}

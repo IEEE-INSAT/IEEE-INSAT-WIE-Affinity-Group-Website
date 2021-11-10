@@ -9,12 +9,16 @@ import Rubon from '../../components/Rubon/Rubon'
 import svg1 from '../../svgs/1.svg'
 import svg2 from '../../svgs/2.svg'
 import svg3 from '../../svgs/3.svg'
-
+import Img from '../../components/img-slide/Img'
 
 
 
 const Showactivities = () => {
     useEffect(()=> {
+     
+        function value(num , i) {
+            list[num].style.transform=`translateY(-${i}px)`;
+        }
         const list = document.getElementsByClassName("element-activities");
         const link = document.getElementsByClassName("element6");
         const svgs = document.getElementsByClassName("svg");
@@ -26,15 +30,23 @@ const Showactivities = () => {
       var  lastscroll=0; var lastscroll1=0;
       var  lastvalue=0; var currentvalue=0;
       var offset=0;
-
+var i = 0
         var x = 60;
         var y=100;
         var t =0;
-        var z=155;
-        var a = 220;
-        var b = 170;
+        var z=115;
+        var a = 200;
+        var b = 220;
         var done=true;
-        var c =230;
+        var c =242;
+        var d= 160;
+        var k=0;
+        var e=190;
+        if (window.innerWidth<800) {
+            i=1;
+        }else {
+            i=2;
+        }
         window.addEventListener("scroll",()=> {
             // if (rectangle[0].getBoundingClientRect().y<500){ 
             //     if (rectangle[0].getBoundingClientRect().y<lastscroll1){
@@ -62,14 +74,14 @@ if (containerActivities[0].getBoundingClientRect().top && done) {
                     if (containerActivities[0].getBoundingClientRect().y<0 && containerActivities[0].getBoundingClientRect().y>-1000){
            
           currentvalue = document.documentElement.scrollTop -offset ;
-          console.log('hahahahah' ,list[4].getBoundingClientRect().y)
-                
-                   x+=(currentvalue-lastvalue)*2;
-                   y+=(currentvalue-lastvalue)*4;
-                   z+=(currentvalue-lastvalue)*3.5;
-                   a+=(currentvalue-lastvalue)*4.5;
-                   b+=(currentvalue-lastvalue)*4.5;
-                  
+          currentvalue=currentvalue-lastvalue;
+          x+=(currentvalue)*1*i;
+          y+=(currentvalue)*2*i;
+          z+=(currentvalue)*1.5*i;
+          a+=(currentvalue)*2.2*i;
+          b+=(currentvalue)*2.5*i;
+          d+=(currentvalue)*2.5*i;
+          e+=(currentvalue)*1.7*i
             list[0].style.transform=`translateY(-${x}px)`;
             // svgs[0].style.top=`${x}px`;
             list[1].style.transform=`translateY(-${y}px)`;
@@ -78,7 +90,14 @@ if (containerActivities[0].getBoundingClientRect().top && done) {
             list[2].style.transform=`translateY(-${z}px)`;
             list[3].style.transform=`translateY(-${a}px)`;
             list[4].style.transform=`translateY(-${b}px)`;
+            list[5].style.transform=`translateY(-${d}px)`;
+            list[6].style.transform=`translateY(-${e}px)`;
+            translate(0,1);
 
+            function translate(num ,val) {
+             k+=(currentvalue)*val*i;
+                  list[num].style.transform=`translateY(-${k}px)`;
+              }
         
 
 
@@ -86,8 +105,8 @@ if (containerActivities[0].getBoundingClientRect().top && done) {
             // if(y<-20)y=-20;
 
             }
-         
-         if (list[4].getBoundingClientRect().y<100){
+         console.log(list[6].getBoundingClientRect().y)
+         if (list[6].getBoundingClientRect().y<300){
             link[0].style.transform='translate(0)';
          }
          else{
@@ -103,7 +122,6 @@ if (containerActivities[0].getBoundingClientRect().top && done) {
 return (
     <div className="big-container-activities">
     <div className="rubons">
-<Rubon text=" Welcome to our Wie Page. Welcome to our Wie Page. Welcome to our Wie Page. Welcome to our Wie Page Welcome to our Wie Page Welcome to our Wie Page" deg ={0} num ={4}></Rubon>
 <Rubon text="keep scrolling to discover wie. keep scrolling to discover wie. keep scrolling to discover wie keep scrolling to discover wie"deg ={0} num ={5}></Rubon>
     </div>
 <div className="container-activities">
@@ -116,11 +134,15 @@ return (
             </div>
         </div>
         <div className="list">
-            <img src={pic1} className="element-activities element1" />
-            <img src={pic2} className="element-activities element2" />
-            <img src={pic3} className="element-activities element3" />
-            <img src={pic5} className="element-activities element4" />
-            <img src={pic4} className="element-activities element5" />
+            <Img pic = {pic1} num = {1} top={60}/>
+            <Img pic = {pic2} num = {2} top={80} right={0}/>
+            <Img pic = {pic3} num = {3} top={131} right={32}/>
+            <Img pic = {pic4} num = {4} top={200} right={0}/>
+            <Img pic = {pic1} num = {5} top={242} right={42}/>
+            <Img pic = {pic5} num = {7} top={170} right={0} left={40}/>
+            <Img pic = {pic2} num = {8} top={187} right={40}/>
+            
+        
             <img className="svg svg1" src={svg1} alt="" />
             <img className="svg svg2" src={svg2} alt="" />
             <img className="svg svg3" src={svg3} alt="" />

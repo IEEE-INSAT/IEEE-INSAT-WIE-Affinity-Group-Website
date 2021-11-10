@@ -1,7 +1,7 @@
 import React from 'react'
 import HorizontalScroll from 'react-scroll-horizontal'
 import Typewriter from "typewriter-effect";
-
+import Rubon from '../../components/Rubon/Rubon';
 const Intro = () => {
     return (
         <div className="container-big">
@@ -37,6 +37,12 @@ const Intro = () => {
 
   <div className="pic1"></div>
   </div>
+<div className="big-container-activities">
+
+  <div className="rubons">
+
+<Rubon text=" Welcome to our Wie Page. Welcome to our Wie Page. Welcome to our Wie Page. Welcome to our Wie Page Welcome to our Wie Page Welcome to our Wie Page" deg ={0} num ={4}></Rubon>
+</div></div>
   <div className="container-cards">
   <HorizontalScroll
    pageLock      = { true }

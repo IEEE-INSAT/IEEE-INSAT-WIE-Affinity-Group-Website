@@ -2,8 +2,8 @@
 .slide {
     .wrapper-card{
         transition: all 0.7s;
-        color: rgb(250, 210, 255);
-        background-color: #053c5e52;
+        color: rgb(255, 255, 255);
+        background-color: #000000;
 position: absolute;
 height: 100%;
 z-index: -2;
@@ -20,14 +20,14 @@ align-items: center;position: absolute;
     position: relative;
     img {
         transition: all 0.5s;
-        border-radius: 100%;
-top: 0;
+        border-radius: 50%;
+top: -10%;
         position: absolute;
-    width: 100%;
-    height: 90%;
-    opacity: 0.9;
+    width: 80%;
+    height: 50%;
  }
  .title {
+     color: white;
     h1 {
         font-size: 2.5rem;
     }
@@ -36,10 +36,13 @@ top: 0;
      p {
          font-size: 1.5rem;
          margin: 0;
+     color: white;
+
      }
  }
  .quote {
      margin:0 15px;
+     color: white;
      
      display: flex;
      align-items: center;
@@ -72,7 +75,7 @@ top: 0;
         clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     }
     .wrapper-card {
-        background-color: #261831d2;
+        background-color: #000000;
 
         height: 20%;
         width: 60%;
@@ -80,9 +83,10 @@ top: 0;
     bottom: 10%;
 
     }
-    .title,.position,.quote {
-        color: rgba(250, 235, 215, 0);
+   .position,.quote {
+        color: rgba(255, 255, 255, 0);
     }
+  
     }
     
 .slide.down {
