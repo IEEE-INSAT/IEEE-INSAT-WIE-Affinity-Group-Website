@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './Rubon.scss'
-const Rubon = ({text, deg,num}) => {
+const Rubon = ({text, deg,num, color}) => {
 
     useEffect(()=> {
         var lastscroll=0
@@ -18,13 +18,15 @@ const Rubon = ({text, deg,num}) => {
 //        x=  rubons[i].style.transform
 //        degs.push(String(x));
 // };
-
+if (color=="pink"){
+    rubon.classList.add("pink");
+}
      window.addEventListener("scroll", ()=>{
         // text=res;
          if (rubons[0].getBoundingClientRect().bottom<700 && rubons[0].getBoundingClientRect().bottom>0){
         if (lastscroll > rubons[0].getBoundingClientRect().y ){ 
 
-         x+=10;
+         x+=7;
      rubon.style.transform =`translate(${x}px)`
      if (num%2){
      rubon.style.transform =`translate(-${x}px)`
@@ -32,7 +34,7 @@ const Rubon = ({text, deg,num}) => {
      }
     }
         else {
-            x-=25;
+            x-=7;
      rubon.style.transform =`translate(${x}px)`
      if (num%2){
         rubon.style.transform =`translate(-${x}px)`

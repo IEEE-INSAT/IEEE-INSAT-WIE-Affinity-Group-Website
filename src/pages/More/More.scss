@@ -1,78 +1,76 @@
-.relative{
-    margin-top: 0vh;
-    position: relative;
-    z-index: 8;
-    .inside{
-        width: 100%;
-        height: 100%;
-    background-color: rgb(226, 192, 151) ;
-
-    }
-}
-.more-container{
+.relative {
+  margin-top: 0vh;
+  position: relative;
+  z-index: 8;
+  .inside {
     width: 100%;
-    height: 120vh;
-    background-color: #acbeddbe;
-    position: relative;
-    z-index: 7;
-    transition: 1s all;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 1s all;
-    .wrapper-container {
-        height: 90vh;
-        width: fit-content;
-        overflow: hidden;
-
-    }
-.container-container {
-    height: 95vh;
-        width: 95vw;
-        overflow: hidden;
-
+    height: 100%;
+    background-color: rgb(255, 244, 231);
+  }
 }
-    .slider-container {
-        background-color: rgba(114, 167, 167, 0);
-        height: 90vh;
-        width: fit-content;
-        display: flex;
-        // align-items: center;
-        scrollbar-width: none;
-        transform: translateX(0);
-        will-change: transform;
-        transition: transform 0.3s ease-out;
-        cursor: grab;
-        justify-content: center;
-        align-items: center;
-        .slide {
-            margin:0 0 0 2rem;
-            height: 65vh;
-            min-width: 20vw;
-            display: flex;
-        
-             transition: 0.5s all;
+.more-container {
+  width: 100%;
+  height: 120vh;
+  background-color: #acbeddbe;
+  position: relative;
+  z-index: 7;
+  transition: 1s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s all;
+  .rubonHolder {
+      position: absolute;
+      top: 10%;
+      left: 0;
+  }
+  .wrapper-container {
+    height: 90vh;
+    width: fit-content;
+    overflow: hidden;
+  }
+  .container-container {
+    height: 95vh;
+    width: 95vw;
+    overflow: hidden;
+  }
+  .slider-container {
+    background-color: rgba(114, 167, 167, 0);
+    height: 90vh;
+    width: fit-content;
+    display: flex;
+    // align-items: center;
+    scrollbar-width: none;
+    transform: translateX(0);
+    will-change: transform;
+    transition: transform 0.3s ease-out;
+    cursor: grab;
+    justify-content: center;
+    align-items: center;
+    .slide {
+      margin: 0 0 0 2rem;
+      height: 43vh;
+      min-width: 20vw;
+      display: flex;
 
-        }
+      transition: 0.5s all;
     }
-    
+  }
 
-
-
-    .rectangle {
-        z-index: -1;
-        height: 40vh;
-        width: 100%;
-        position: absolute;
-        top: -20vh;
-        transform: rotate(-3deg);
-        transition: 1s all;
-    }
+  .rectangle {
+    z-index: -1;
+    height: 40vh;
+    width: 100%;
+    position: absolute;
+    top: -20vh;
+    transform: rotate(-3deg);
+    transition: 1s all;
+  }
 }
 .slider-container.grabbing {
-    cursor: grabbing;
+  cursor: grabbing;
 }
-.more-container , .rectangle {
-    background-color:  #e2c8c8;
-
+.more-container,
+.rectangle {
+  background-color: #f3f5e4;
 }

@@ -22,7 +22,7 @@ const Aboutus = () => {
             <Showactivities></Showactivities>
             <More></More>
             {/* <Facts></Facts> */}
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
             {/* <Gallery></Gallery> */}
 
 
