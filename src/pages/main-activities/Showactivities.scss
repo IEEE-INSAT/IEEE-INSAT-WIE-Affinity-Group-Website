@@ -109,15 +109,15 @@ flex-direction: column;
     transition: 0.5s 0.2s all;
 
     
-    }    .svg1 {
+    }    .svg1,.initialSvg1 {
             top: 60vw;
             left: 10vw;
         }
-        .svg2 {
+        .svg2,.initialSvg2 {
             top: 150vw;
             right: 10vw;
         }
-        .svg3 {
+        .svg3, .initialSvg3 {
             top: 100vw;
         }
 }

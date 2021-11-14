@@ -4,6 +4,7 @@ const Rubon = ({text, deg,num, color}) => {
 
     useEffect(()=> {
         var lastscroll=0
+        var lastscroll1=0;
         var res;
         var x =0;
         var done = true;
@@ -44,6 +45,26 @@ if (color=="pink"){
         }}
         lastscroll =rubons[0].getBoundingClientRect().y;
 
+        if (rubons[2].getBoundingClientRect().bottom<700 && rubons[2].getBoundingClientRect().bottom>0){
+            if (lastscroll1 > rubons[2].getBoundingClientRect().y ){ 
+    
+             x+=7;
+         rubon.style.transform =`translate(${x}px)`
+         if (num%2){
+         rubon.style.transform =`translate(-${x}px)`
+    
+         }
+        }
+            else {
+                x-=7;
+         rubon.style.transform =`translate(${x}px)`
+         if (num%2){
+            rubon.style.transform =`translate(-${x}px)`
+       
+            }
+    
+            }}
+            lastscroll1 =rubons[2].getBoundingClientRect().y;
 })
 
     },[])

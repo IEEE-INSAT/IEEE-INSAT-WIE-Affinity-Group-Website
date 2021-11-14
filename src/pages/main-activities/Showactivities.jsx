@@ -13,6 +13,21 @@ import Img from "../../components/img-slide/Img";
 
 const Showactivities = () => {
   useEffect(() => {
+    function inViewPort(el) {
+      var rect = el.getBoundingClientRect();
+
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight ||
+            document.documentElement
+              .clientHeight) /* or $(window).height() */ &&
+        rect.right <=
+          (window.innerWidth ||
+            document.documentElement.clientWidth) /* or $(window).width() */
+      );
+    }
     function value(num, i) {
       list[num].style.transform = `translateY(-${i}px)`;
     }
@@ -20,6 +35,7 @@ const Showactivities = () => {
     const link = document.getElementsByClassName("element6");
     const svgs = document.getElementsByClassName("svg");
     const vid = document.getElementById("myVideo");
+    const rubonHolder = document.getElementsByClassName("rubonHolder");
 
     const containerActivities = document.getElementsByClassName(
       "container-activities"
@@ -48,32 +64,43 @@ const Showactivities = () => {
     } else {
       i = 2;
     }
+
+
+
+   
+
+
     window.addEventListener("scroll", () => {
-      // if (rectangle[0].getBoundingClientRect().y<500){
-      //     if (rectangle[0].getBoundingClientRect().y<lastscroll1){
-      //                r-=0.1;
-      //                t-=20;
-      //     // rectangle[0].style.transform=`rotate(${r}deg) translateY(${t}px)`;
-      //     // containerActivities[0].style.transform=`translateY(${t}px)`
-      // // }
-      // else {
-      //     r+=0.2;
-      //     t+=0.5;
 
-      //     rectangle[0].style.transform=`rotate(${r}deg translateY(${t}vh)`
+      const limitTop= document.getElementsByClassName("rubon5");
+      console.log("fffff",limitTop[0].getBoundingClientRect().top)
+      if (limitTop[0].getBoundingClientRect().top>50){
+        list[0].style.transform = `translateY(-${60}px)`;
+        list[1].style.transform = `translateY(-${100}px)`;
+        svgs[2].style.transform = `translateY(-${100 + 30}px)`;
+        svgs[1].style.transform = `translateY(-${60 + 40}px)`;
+        list[2].style.transform = `translateY(-${115}px)`;
+        list[3].style.transform = `translateY(-${200}px)`;
+        list[4].style.transform = `translateY(-${220}px)`;
+        list[5].style.transform = `translateY(-${160}px)`;
+        list[6].style.transform = `translateY(-${190}px)`;
+      }
 
-      // }
-      // lastscroll1=rectangle[0].getBoundingClientRect().y;
-
-      // }
       if (containerActivities[0].getBoundingClientRect().top && done) {
         offset = document.documentElement.scrollTop - 100;
         done = false;
       }
 
+
+       
+     var  test =   inViewPort(rubonHolder[0]);
+     console.log(containerActivities[0].getBoundingClientRect().y < 0 &&
+     containerActivities[0].getBoundingClientRect().y > -1000 &&
+   !test)
       if (
         containerActivities[0].getBoundingClientRect().y < 0 &&
-        containerActivities[0].getBoundingClientRect().y > -1000
+        containerActivities[0].getBoundingClientRect().y > -1000 &&
+      !test
       ) {
         currentvalue = document.documentElement.scrollTop - offset;
         currentvalue = currentvalue - lastvalue;

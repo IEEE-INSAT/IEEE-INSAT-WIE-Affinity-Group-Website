@@ -6,11 +6,10 @@
     transition: all 0.7s;
     color: rgb(255, 255, 255);
     background-color: #441f4998;
-    position: absolute;
     height: 100%;
     z-index: -2;
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-left: 0;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    left: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -112,60 +111,73 @@ left: 0;
 }
 .slide1 {
   opacity: 1;
-  transform: translate(0%);
+  left: 0;
+  top: 25%;
 }
 .slide2 {
   opacity: 1;
-
-  transform: translate(calc(20vw - 25%));
+  top: 40%;
+ left: 18%;
 }
 .slide3 {
+  top: 25%;
+
   opacity: 1;
-  transform: translate(calc(40vw - 50%));
+  left: 43.5%;
 }
 .slide4 {
+  top: 40%;
+
   opacity: 1;
-  transform: translate(calc(60vw - 75%));
+  left: 61.5%;
 }
 .slide5 {
   opacity: 1;
-  transform: translate(calc(80vw - 100%));
+  top: 25%;
+left: 0;
 }
 .slide6 {
+  top: 40%;
   opacity: 1;
-  transform: translate(calc(100vw - 125%));
+left: 18%;
 }
-// .slide7 {
-//     opacity: 1;
-//     transform: translate(calc(120vw - 5%));
-// }
-// .slide8 {
-//     opacity: 1;
-//     transform: translate(calc(100vw - 75%));
-// }
+.slide7 {
+  opacity: 1;
+  top: 25%;
 
-.more-container .slider-container .slide:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #000000a2;
-  z-index: 99;
-  overflow: hidden;
-  img.image {
-    opacity: 1;
-    transform: translateY(-100%);
-    transition: all 1s;
-  }
-  img.imageLowOpacity {
-    opacity: 0.5;
-  }
-  .title {
-    transform: translate(20px);
-    opacity: 1;
-  }
-  .position {
-    transform: translate(0px);
-    opacity: 1;
-  }
+  left: 43.5%;
+
 }
+.slide8 {
+  top: 40%;
+
+  opacity: 1;
+  left: 61.5%;
+
+}
+
+// .more-container .slider-container .slide:hover {
+//   display: flex;
+//   overflow: hidden;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   background-color: #d3ababa2;
+//   z-index: 99;
+//   overflow: hidden;
+//   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+//   border: 2px black solid;
+//   img.image {
+//     opacity: 1;
+//     transition: all 1s;
+//   }
+
+//   .title {
+//     transform: translate(20px);
+//     opacity: 1;
+//   }
+//   .position {
+//     transform: translate(0px);
+//     opacity: 1;
+//   }
+// }

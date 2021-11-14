@@ -48,7 +48,6 @@ const More = () => {
       <div className="inside"></div>
       <div className="more-container">
         <div className="rubonHolder">
-          {" "}
           <Rubon
             text="Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team.Meet Our Lovely Team."
             deg={10}
