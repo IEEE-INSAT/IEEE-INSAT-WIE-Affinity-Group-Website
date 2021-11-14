@@ -22,7 +22,6 @@ window.addEventListener("scroll",()=> {
         if (fall[0].getBoundingClientRect().y<0 || seen==true){
             seen= true;
             if (done){
-    console.log("x=",x, "y=",y)
                 
             done=false;
         if (lastscroll > test[0].getBoundingClientRect().y ){ 

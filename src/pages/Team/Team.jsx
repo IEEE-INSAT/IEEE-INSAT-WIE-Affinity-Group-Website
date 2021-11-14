@@ -54,7 +54,6 @@ var textContainer = document.querySelector('#text-container');
 var path = document.querySelector( textPath.getAttribute('href') );
 
 var pathLength = path.getTotalLength();
-console.log(pathLength);
 
 function updateTextPathOffset(offset){
   textPath.setAttribute('startOffset', offset); 

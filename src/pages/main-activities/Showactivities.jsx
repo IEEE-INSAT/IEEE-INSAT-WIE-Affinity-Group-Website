@@ -73,7 +73,6 @@ const Showactivities = () => {
     window.addEventListener("scroll", () => {
 
       const limitTop= document.getElementsByClassName("rubon5");
-      console.log("fffff",limitTop[0].getBoundingClientRect().top)
       if (limitTop[0].getBoundingClientRect().top>50){
         list[0].style.transform = `translateY(-${60}px)`;
         list[1].style.transform = `translateY(-${100}px)`;
@@ -94,9 +93,7 @@ const Showactivities = () => {
 
        
      var  test =   inViewPort(rubonHolder[0]);
-     console.log(containerActivities[0].getBoundingClientRect().y < 0 &&
-     containerActivities[0].getBoundingClientRect().y > -1000 &&
-   !test)
+   
       if (
         containerActivities[0].getBoundingClientRect().y < 0 &&
         containerActivities[0].getBoundingClientRect().y > -1000 &&
@@ -131,7 +128,6 @@ const Showactivities = () => {
         // if(x<-40)x=-40;
         // if(y<-20)y=-20;
       }
-      console.log(list[6].getBoundingClientRect().y);
       if (list[6].getBoundingClientRect().y < 300) {
         link[0].style.transform = "translate(0)";
       } else {

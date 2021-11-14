@@ -55,7 +55,7 @@ filters[position].classList.remove("goback")
  
         moveout(pos)
         pos++;
-        if (pos==images.length){pos=0;console.log("wa")}
+        if (pos==images.length){pos=0;}
         images[pos].classList.add("show")
 filters[pos].classList.add("show")
 filters[pos].classList.remove("showsmall")
