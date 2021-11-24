@@ -58,9 +58,9 @@ const More = () => {
             color="pink"
             num={7}
           ></Rubon>
-        </div>{" "}
+        </div>
         <div className="rectangle"></div>
-        <div className="wrapper-container">
+        <div className="wrapper-containere">
           <Slider></Slider>
         </div>
       </div>

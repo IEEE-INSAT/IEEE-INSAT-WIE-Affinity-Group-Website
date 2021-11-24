@@ -65,15 +65,9 @@ const Showactivities = () => {
       i = 2;
     }
 
-
-
-   
-
-
     window.addEventListener("scroll", () => {
-
-      const limitTop= document.getElementsByClassName("rubon5");
-      if (limitTop[0].getBoundingClientRect().top>50){
+      const limitTop = document.getElementsByClassName("rubon5");
+      if (limitTop[0].getBoundingClientRect().top > 50) {
         list[0].style.transform = `translateY(-${60}px)`;
         list[1].style.transform = `translateY(-${100}px)`;
         svgs[2].style.transform = `translateY(-${100 + 30}px)`;
@@ -83,6 +77,13 @@ const Showactivities = () => {
         list[4].style.transform = `translateY(-${220}px)`;
         list[5].style.transform = `translateY(-${160}px)`;
         list[6].style.transform = `translateY(-${190}px)`;
+        x = 60;
+        y = 100;
+        z = 115;
+        a = 200;
+        b = 220;
+        d = 160;
+        e = 190;
       }
 
       if (containerActivities[0].getBoundingClientRect().top && done) {
@@ -90,14 +91,12 @@ const Showactivities = () => {
         done = false;
       }
 
+      var test = inViewPort(rubonHolder[0]);
 
-       
-     var  test =   inViewPort(rubonHolder[0]);
-   
       if (
         containerActivities[0].getBoundingClientRect().y < 0 &&
         containerActivities[0].getBoundingClientRect().y > -1000 &&
-      !test
+        !test
       ) {
         currentvalue = document.documentElement.scrollTop - offset;
         currentvalue = currentvalue - lastvalue;
@@ -118,15 +117,6 @@ const Showactivities = () => {
         list[4].style.transform = `translateY(-${b}px)`;
         list[5].style.transform = `translateY(-${d}px)`;
         list[6].style.transform = `translateY(-${e}px)`;
-        translate(0, 1);
-
-        function translate(num, val) {
-          k += currentvalue * val * i;
-          list[num].style.transform = `translateY(-${k}px)`;
-        }
-
-        // if(x<-40)x=-40;
-        // if(y<-20)y=-20;
       }
       if (list[6].getBoundingClientRect().y < 300) {
         link[0].style.transform = "translate(0)";

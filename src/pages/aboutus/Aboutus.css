@@ -143,13 +143,12 @@ flex-direction: column;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    height: fit-content;
     /* background-color: #a95187; */
 
  
 }
 .firstcontainer {
-    width:100%;
+    width:99%;
     margin: 0 5px;
     display: flex;
     justify-content: space-evenly;

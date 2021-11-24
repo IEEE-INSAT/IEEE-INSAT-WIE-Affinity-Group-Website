@@ -9,7 +9,10 @@ html, body {
 /* body::-webkit-scrollbar {
 displa
 } */
-
+#root{
+  width: 100%;
+  overflow-x:unset;
+}
 @font-face {
   font-family: nova;
   src: url(./fonts/optima-nova-lt-light.otf);

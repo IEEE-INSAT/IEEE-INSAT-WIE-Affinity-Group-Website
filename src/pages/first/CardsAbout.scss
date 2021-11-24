@@ -1,0 +1,105 @@
+.container-cards {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  svg {
+    position: absolute;
+  }
+  .card {
+    position: absolute;
+    h1 {
+      font-size: calc(min(3vw, 30px));
+      font-family: campton;
+      margin: 5px;
+      width: 100%;
+    }
+
+    p {
+      font-size: calc(min(1.2vw, 15px, 2.5vh));
+    }
+    width: 30%;
+    height: fit-content;
+    padding: 3%;
+    // height: 40;
+    background-color: rgba(151, 190, 241, 0.349);
+    border-radius: 10px;
+  }
+  .card1 {
+    top: 7%;
+    // left: 15%;
+    left: 5%;
+    align-self: flex-start;
+    justify-self: flex-start;
+  }
+  .card2 {
+    bottom: 0;
+    right: 27%;
+    align-self: flex-end;
+    min-width: 40%;
+  }
+  .card3 {
+    top: 2%;
+    right: 1%;
+    align-self: flex-start;
+    width: 30%;
+  }
+  svg {
+  }
+  svg#svg1 {
+    top: 10%;
+    left: 15%;
+    height: 80%;
+    width: 40%;
+  }
+
+  #svg2 {
+    top: 25%;
+    right: 33%;
+    opacity: 1;
+    height: 15%;
+    opacity: 0;
+    width: 40%;
+  }
+  #svg4 {
+    top: 35%;
+    right: 7%;
+    height: 15%;
+    opacity: 1;
+    width: 40%;
+    opacity: 0;
+  }
+  #svg6 {
+    left: 0;
+    bottom: 0;
+    width: 10%;
+    height: 25%;
+  }
+  #svg7 {
+    right: 33%;
+    top: 10%;
+    width: 20%;
+    height: 30%;
+  }
+  #svg3 {
+    right: 10%;
+    bottom: 0;
+    width: 10%;
+    height: 25%;
+  }
+}
+@media (max-width: 1200px) {
+  .container-cards .card {
+  }
+}
+@media (max-width: 550px) {
+  .container-cards {
+    height: 70vh;
+    p {
+      font-size: calc(min(1.8vw, 20px));
+    }
+  }
+  .card1 {
+    width: 50%;
+  }
+}
