@@ -3,9 +3,9 @@ import './Img.scss'
 const Img = ({pic,num, top , right, left}) => {
     useEffect(()=> {
         var element= document.querySelectorAll(`.element${num}`);
-        element[0].style.setProperty("--top",top+"vw");
-        element[0].style.setProperty("--right",right+"vw");
-        element[0].style.setProperty("--left",left+"vw");
+        element[0].style.setProperty("--top",top+"%");
+        element[0].style.setProperty("--right",right+"%");
+        element[0].style.setProperty("--left",left+"%");
 
     }, [])
     return (

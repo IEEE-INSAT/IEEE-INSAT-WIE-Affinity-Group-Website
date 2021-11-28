@@ -1,5 +1,6 @@
 html, body {
   position: relative;
+  scroll-behavior: smooth;
   /* height: 100vh; */
   margin: 0;
   height: 100%;

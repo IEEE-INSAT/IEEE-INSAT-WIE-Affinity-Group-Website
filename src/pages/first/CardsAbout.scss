@@ -3,54 +3,61 @@
   height: 100vh;
   position: relative;
   overflow: hidden;
+  display: grid !important ;
+  grid-template-rows: repeat(10,10%);
+  grid-template-columns: repeat(10,10%);
   svg {
     position: absolute;
   }
   .card {
-    position: absolute;
+    position: relative;
+    transition: 1s all;
     h1 {
-      font-size: calc(min(3vw, 30px));
+      font-size: calc(min(3vw, 35px));
       font-family: campton;
       margin: 5px;
       width: 100%;
     }
 
     p {
-      font-size: calc(min(1.2vw, 15px, 2.5vh));
+      font-size: calc(min(1.1vw, 20px));
     }
-    width: 30%;
     height: fit-content;
     padding: 3%;
-    // height: 40;
     background-color: rgba(151, 190, 241, 0.349);
     border-radius: 10px;
   }
   .card1 {
-    top: 7%;
-    // left: 15%;
-    left: 5%;
-    align-self: flex-start;
-    justify-self: flex-start;
+    grid-area: 1/1/7/8;
+    margin: 10px;
+min-width: 40%;
+max-width: 40%;
+transform: translate(5%);
+
   }
+
   .card2 {
-    bottom: 0;
-    right: 27%;
-    align-self: flex-end;
-    min-width: 40%;
+    grid-area: 7/5/10/10;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(10%);
+
   }
+ 
   .card3 {
-    top: 2%;
-    right: 1%;
+    grid-area: 2/6/5/10;
     align-self: flex-start;
-    width: 30%;
+    transform: translate(15%);
+  
   }
   svg {
   }
   svg#svg1 {
-    top: 10%;
-    left: 15%;
-    height: 80%;
-    width: 40%;
+    top: -90%;
+    left: -40%;
+    height: 172%;
+    width: 60%;
   }
 
   #svg2 {
@@ -71,35 +78,90 @@
   }
   #svg6 {
     left: 0;
-    bottom: 0;
-    width: 10%;
-    height: 25%;
+    bottom: 0%;
+    width:30%;
+    height: 45%;
+    max-height: 300px;
   }
   #svg7 {
-    right: 33%;
-    top: 10%;
-    width: 20%;
-    height: 30%;
+    right: 40%;
+    top: 15%;
+    width: 15%;
+    height: 15%;
+  }
+  #svg8 {
+    right: 3%;
+    top: 40%;
+    width: 10%;
+    height: 10%;
   }
   #svg3 {
-    right: 10%;
+   left: 10%;
     bottom: 0;
-    width: 10%;
+    width: 5%;
     height: 25%;
+    opacity: 0;
   }
 }
+#leg {
+  animation: legMove 2s linear infinite alternate ;
+  transform-origin: center;
+
+}
+@keyframes legMove {
+  0% { transform: rotate(20deg);}
+  100%{ transform: rotate(0deg);}
+}
+
+
+
+
+
+
 @media (max-width: 1200px) {
   .container-cards .card {
   }
 }
-@media (max-width: 550px) {
-  .container-cards {
-    height: 70vh;
+@media (max-width: 800px) {
+  .container-cards
+  { #svg6 {
+  width:37%;
+  height: 31%;
+}  height: 50vh;
+  .card {
+    svg {
+      max-width: 350px;
+    }
+ 
     p {
-      font-size: calc(min(1.8vw, 20px));
+      font-size: 50%;
     }
   }
   .card1 {
     width: 50%;
+    top: 17%;
+    // left: 15%;
+    left: 5%;
+    align-self: flex-start;
+    justify-self: flex-start;
   }
-}
+  .card2 {
+    min-width: 50%;
+
+  }
+}}
+@media (max-width: 1050px) {
+  .container-cards {
+   
+    height: 70vh;}}
+    @media (max-width: 300px) {
+      svg {
+        
+      }
+      .container-cards {
+       
+        height: 80vh;}}
+        @media (max-height: 400px) {
+          .container-cards {
+           
+            height: 120vh;}}

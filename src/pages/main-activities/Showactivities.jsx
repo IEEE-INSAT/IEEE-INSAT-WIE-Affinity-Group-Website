@@ -12,6 +12,14 @@ import svg3 from "../../svgs/3.svg";
 import Img from "../../components/img-slide/Img";
 
 const Showactivities = () => {
+  var n =297 ;
+  if (window.innerWidth < 800) {
+   
+    n=297;
+  } else {
+  
+    n=330;
+  }
   useEffect(() => {
     function inViewPort(el) {
       var rect = el.getBoundingClientRect();
@@ -60,9 +68,11 @@ const Showactivities = () => {
     var k = 0;
     var e = 190;
     if (window.innerWidth < 800) {
-      i = 0.5;
+      i =1;
+      n=297;
     } else {
       i = 2;
+      n=350;
     }
 
     window.addEventListener("scroll", () => {
@@ -70,6 +80,8 @@ const Showactivities = () => {
       if (limitTop[0].getBoundingClientRect().top > 50) {
         list[0].style.transform = `translateY(-${60}px)`;
         list[1].style.transform = `translateY(-${100}px)`;
+        svgs[0].style.transform = `translateY(-${500 + 30}px)`;
+
         svgs[2].style.transform = `translateY(-${100 + 30}px)`;
         svgs[1].style.transform = `translateY(-${60 + 40}px)`;
         list[2].style.transform = `translateY(-${115}px)`;
@@ -95,7 +107,7 @@ const Showactivities = () => {
 
       if (
         containerActivities[0].getBoundingClientRect().y < 0 &&
-        containerActivities[0].getBoundingClientRect().y > -1000 &&
+        containerActivities[0].getBoundingClientRect().y > -2000 &&
         !test
       ) {
         currentvalue = document.documentElement.scrollTop - offset;
@@ -111,6 +123,8 @@ const Showactivities = () => {
         // svgs[0].style.top=`${x}px`;
         list[1].style.transform = `translateY(-${y}px)`;
         svgs[2].style.transform = `translateY(-${y + 30}px)`;
+        svgs[0].style.transform = `translateY(-${y}px)`;
+
         svgs[1].style.transform = `translateY(-${x + 40}px)`;
         list[2].style.transform = `translateY(-${z}px)`;
         list[3].style.transform = `translateY(-${a}px)`;
@@ -149,13 +163,13 @@ const Showactivities = () => {
             </div>
           </div>
           <div className="list">
-            <Img pic={pic1} num={1} top={60} />
-            <Img pic={pic2} num={2} top={80} right={0} />
-            <Img pic={pic3} num={3} top={131} right={32} />
-            <Img pic={pic4} num={4} top={200} right={0} />
-            <Img pic={pic1} num={5} top={242} right={42} />
-            <Img pic={pic5} num={7} top={170} right={0} left={40} />
-            <Img pic={pic2} num={8} top={187} right={40} />
+            <Img pic={pic1} num={1} top={100} />
+            <Img pic={pic2} num={2} top={170} right={5} />
+            <Img pic={pic3} num={3} top={209} right={21} />
+            <Img pic={pic4} num={4} top={340} right={-1} />
+            <Img pic={pic1} num={5} top={332} right={42} />
+            <Img pic={pic5} num={7} top={270} right={5} left={23} />
+            <Img pic={pic2} num={8} top={n} left={10} />
 
             <img className="svg svg1" src={svg1} alt="" />
             <img className="svg svg2" src={svg2} alt="" />

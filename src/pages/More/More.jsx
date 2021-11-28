@@ -1,14 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import "./More.scss";
 import Rubon from "../../components/Rubon/Rubon";
 import Slider from "../../components/slider/Slider";
+import Choice from "../../components/choice/Choice";
 const More = () => {
+  const [up, setup] = useState(false);
+  const [Phone,setPhone] = useState(false);
+
+ 
   useEffect(() => {
-    function inViewPort(el) {
+    if (window.innerWidth<700){
+    setPhone(true)
+  } function inViewPort(el) {
       var rect = el.getBoundingClientRect();
 
       return (
-        rect.top >= 0 &&
+        rect.top >= 100 &&
         rect.left >= 0 &&
         rect.bottom <=
           (window.innerHeight ||
@@ -23,6 +30,7 @@ const More = () => {
     const banner = document.getElementsByClassName("banner");
     const slider = document.getElementsByClassName("slider-container");
     const link = document.getElementsByClassName("element6");
+    const list = document.getElementsByClassName("element-activities");
 
     const rectangle = document.getElementsByClassName("rubonHolder");
     var t = 0;
@@ -32,23 +40,20 @@ const More = () => {
       "scroll",
       () => {
        
-          if (inViewPort(link[0]) && rectangle[0].getBoundingClientRect().y<window.innerHeight) {
-            if (container[0].getBoundingClientRect().bottom < lastscroll) {
-            t += 10;
-              container[0].style.transform = `translateY(-${t}px)`;
+          if (list[6].getBoundingClientRect().y < 100) {
+          setup(true)
             } else {
-              t -= 10;
-              container[0].style.transform = `translateY(-${t}px)`;
+              setup(false)
             }
-            lastscroll = container[0].getBoundingClientRect().bottom;
-          }
+
+           
       },
       []
     );
   });
 
   return (
-    <div className="relative">
+    <div className={`relative ${up? 'up' : ''}` }>
       <div className="inside"></div>
       <div className="more-container">
         <div className="rubonHolder">
@@ -61,7 +66,8 @@ const More = () => {
         </div>
         <div className="rectangle"></div>
         <div className="wrapper-containere">
-          <Slider></Slider>
+          
+         <Choice phone={Phone}></Choice>
         </div>
       </div>
     </div>

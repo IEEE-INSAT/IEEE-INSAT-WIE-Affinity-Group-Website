@@ -12,7 +12,7 @@ import rightArrow from "../../teampics/left.png";
 import leftArrow from "../../teampics/right.png";
 
 const Slider = () => {
-  var i =1000;
+  var i = 1000;
   const [Slide1, setSlide1] = useState(false);
   const [Slide2, setSlide2] = useState(false);
   const [Slide3, setSlide3] = useState(false);
@@ -108,7 +108,7 @@ const Slider = () => {
       <div className="slides-containere">
         <div className="first-containere">
           <Slide
-          state={Slide1}
+            state={Slide1}
             onMouseEnter={() => {
               console.log("1");
               setSlide1(true);
@@ -117,7 +117,7 @@ const Slider = () => {
               setSlide4(false);
             }}
             onMouseLeave={() => {
-             setSlide1False();
+              setSlide1False();
             }}
             moveLeft={Slide1 || Slide2 ? true : false}
             img={img1}
@@ -127,8 +127,7 @@ const Slider = () => {
           ></Slide>
 
           <Slide
-          state={Slide2}
-
+            state={Slide2}
             onMouseEnter={() => {
               setSlide1(false);
               setSlide2(true);
@@ -136,7 +135,7 @@ const Slider = () => {
               setSlide4(false);
             }}
             onMouseLeave={() => {
-              setSlide2False()
+              setSlide2False();
             }}
             moveLeft={Slide2 ? true : false}
             img={img2}
@@ -146,11 +145,9 @@ const Slider = () => {
           ></Slide>
 
           <Slide
-          state={Slide3}
-
+            state={Slide3}
             onMouseLeave={() => {
               setSlide3False();
-
             }}
             onMouseEnter={() => {
               setSlide1(false);
@@ -166,8 +163,7 @@ const Slider = () => {
           ></Slide>
 
           <Slide
-          state={Slide4}
-
+            state={Slide4}
             onMouseEnter={() => {
               setSlide1(false);
               setSlide2(false);
@@ -175,7 +171,7 @@ const Slider = () => {
               setSlide4(true);
             }}
             onMouseLeave={() => {
-             setSlide4False();
+              setSlide4False();
             }}
             moveRight={Slide3 || Slide4 ? true : false}
             img={img4}
@@ -187,8 +183,7 @@ const Slider = () => {
 
         <div className="second-containere">
           <Slide
-          state={Slide1}
-
+            state={Slide1}
             onMouseEnter={() => {
               setSlide1(true);
               setSlide2(false);
@@ -196,8 +191,7 @@ const Slider = () => {
               setSlide4(false);
             }}
             onMouseLeave={() => {
-              setSlide1False()
-
+              setSlide1False();
             }}
             moveLeft={Slide1 || Slide2 ? true : false}
             img={img7}
@@ -207,8 +201,7 @@ const Slider = () => {
           ></Slide>
 
           <Slide
-          state={Slide2}
-
+            state={Slide2}
             onMouseEnter={() => {
               setSlide1(false);
               setSlide2(true);
@@ -216,8 +209,7 @@ const Slider = () => {
               setSlide4(false);
             }}
             onMouseLeave={() => {
-              setSlide2False()
-
+              setSlide2False();
             }}
             moveLeft={Slide2 ? true : false}
             img={img6}
@@ -227,10 +219,9 @@ const Slider = () => {
           ></Slide>
 
           <Slide
-          state={Slide3}
+            state={Slide3}
             onMouseLeave={() => {
-              setSlide3False()
-
+              setSlide3False();
             }}
             onMouseEnter={() => {
               setSlide1(false);
@@ -245,7 +236,7 @@ const Slider = () => {
             num={7}
           ></Slide>
           <Slide
-          state={Slide4}
+            state={Slide4}
             onMouseEnter={() => {
               setSlide1(false);
               setSlide2(false);
@@ -253,8 +244,7 @@ const Slider = () => {
               setSlide4(true);
             }}
             onMouseLeave={() => {
-              setSlide4False()
-
+              setSlide4False();
             }}
             moveRight={Slide3 || Slide4 ? true : false}
             img={img4}
