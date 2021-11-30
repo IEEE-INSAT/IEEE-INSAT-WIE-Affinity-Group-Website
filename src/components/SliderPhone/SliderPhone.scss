@@ -5,7 +5,7 @@
       grid-template-columns: repeat(10, 10%);
     }
     .more-container {
-      height: 300vh !important;
+      height:220vh !important;
     }
     .rightArrow,
     .leftArrow {
@@ -32,7 +32,6 @@
     width: 20%;
     transition: 1s all;
     background-color: blue;
-    height: 18%;
     margin: -2.5%;
     max-height: 300px;
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
@@ -43,7 +42,7 @@
   .second-containere {
     min-width: 100%;
     transition: 1s all;
-    transform: translate(52%, 10%);
+    transform: translate(52%, 35%);
     height: 100%;
     display: flex;
     align-items: flex-sta0rt;
@@ -51,7 +50,7 @@
   }
   
   
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     .slides-containere {
       // display: flex;
       position: absolute;
@@ -118,7 +117,7 @@
     }
   }  
 
-  @media (max-width:700px) {
+  @media (max-width:800px) {
 
     .container-info.container-info1, .container-info.container-info5{
       left: 20%;
@@ -166,4 +165,34 @@
     
     }
     
+  }
+  @media (max-width:1050px) {
+    .slidee {
+      width: 22%;
+      min-height: 220px;
+      transition: 1s all;
+      height: 15%;
+      margin: -2.5%;
+      max-height: 250px;
+    }
+  }
+  @media (max-width:870px) {
+    .slidee {
+      width: 23%;
+      min-height: 220px;
+      transition: 1s all;
+      height: 15%;
+      margin: -2.5%;
+      max-height: 220px;
+    }
+  }
+  @media (max-height:500px) {
+    .slidee {
+      min-height: 220px;
+    }
+  } 
+   @media (max-width:1250px) {
+    .slidee {
+      height: 35% !important;
+    }
   }

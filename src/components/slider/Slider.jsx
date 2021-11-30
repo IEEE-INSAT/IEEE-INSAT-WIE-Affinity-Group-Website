@@ -68,7 +68,7 @@ const Slider = () => {
       document.getElementsByClassName("second-containere");
     const slides = document.getElementsByClassName("slidee");
     window.addEventListener("scroll", () => {
-      if (window.innerWidth < 700) {
+      if (window.innerWidth < 800) {
         for (let i = 0; i < slides.length; i++) {
           if (
             inViewPort(slides[i]) &&
@@ -88,14 +88,14 @@ const Slider = () => {
     });
 
     leftArrow[0].addEventListener("click", () => {
-      firstContainer[0].style.transform = "translate(-48%,10%)";
-      secondContainer[0].style.transform = "translate(-48%,10%)";
+      firstContainer[0].style.transform = "translate(-48%,35%)";
+      secondContainer[0].style.transform = "translate(-48%,35%)";
       leftArrow[0].style.opacity = "0";
       rightArrow[0].style.opacity = "1";
     });
     rightArrow[0].addEventListener("click", () => {
-      firstContainer[0].style.transform = "translate(52%,10%)";
-      secondContainer[0].style.transform = "translate(52%,10%)";
+      firstContainer[0].style.transform = "translate(52%,35%)";
+      secondContainer[0].style.transform = "translate(52%,35%)";
       leftArrow[0].style.opacity = "1";
       rightArrow[0].style.opacity = "0";
     });

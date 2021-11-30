@@ -15,7 +15,7 @@ const SliderPhone = () => {
   const [card2, setcard2] = useState(false);
   const [card3, setcard3] = useState(false);
   const [card4, setcard4] = useState(false);
-  const [card5, setcard5] = useState(true);
+  const [card5, setcard5] = useState(false);
   const [card6, setcard6] = useState(false);
   const [card7, setcard7] = useState(false);
   const [card8, setcard8] = useState(false);
@@ -80,7 +80,7 @@ const SliderPhone = () => {
       document.getElementsByClassName("second-containere");
     const slides = document.getElementsByClassName("slideePhone");
     window.addEventListener("scroll", () => {
-      if (window.innerWidth < 700) {
+      if (window.innerWidth < 800) {
         for (let i = 0; i < slides.length; i++) {
           if (
             inViewPort(slides[i]) &&
@@ -89,8 +89,7 @@ const SliderPhone = () => {
             console.log("waaaaaaaaaa", i);
            
              slides[i].classList.add("show");
-   show(slides[i]);
-   console.log("waaa waiting")
+  //  show(slides[i]);
          
             if (i === 0) {
               setcard1(true);

@@ -62,3 +62,7 @@ displa
   font-family:five;
   src: url(./fonts/FiveYearsLater.ttf)
 }
+@font-face {
+  font-family:Quicksand;
+  src: url(./fonts/Quicksand.ttf)
+}

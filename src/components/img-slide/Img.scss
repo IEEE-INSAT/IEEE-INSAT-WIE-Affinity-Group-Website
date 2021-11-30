@@ -1,6 +1,7 @@
 .element-img {
     top: var(--top);
-    right: var(--right);
-    left: var(--left);
+
+     right: calc(min(var(--right), 100px ));
+   
 
 }

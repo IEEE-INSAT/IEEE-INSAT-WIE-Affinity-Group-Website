@@ -20,18 +20,18 @@
 }
 
 .slidee.slide1.moveLeft, .slidee.slide5.moveLeft {
-    transform: translate(-50%, -30%);
+    transform: translate(-35%, -30%);
   
   }
   .slidee.slide2.moveLeft  ,  .slidee.slide6.moveLeft   {
-    transform: translate(-65%, 30%);
+    transform: translate(-50%, 30%);
   
   }
   .slidee.slide3.moveRight,   .slidee.slide7.moveRight   {
-    transform: translate(65%, -30%);
+    transform: translate(50%, -30%);
   
   }
   .slidee.moveRight.slide4,   .slidee.slide8.moveRight  {
-    transform: translate(50%, 30%);
+    transform: translate(35%, 30%);
   
   }

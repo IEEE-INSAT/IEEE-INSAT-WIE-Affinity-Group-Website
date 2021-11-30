@@ -1,0 +1,18 @@
+
+.container-Activity-Phone {
+
+    .elementP-activities.elementP-img {
+top: var(--topHide);
+left: var(--left);
+
+right: var(--right);
+
+opacity: 0;
+
+}
+.elementP-activities.elementP-img-show {
+    top: var(--top);
+    opacity: 0.9;
+
+}
+}

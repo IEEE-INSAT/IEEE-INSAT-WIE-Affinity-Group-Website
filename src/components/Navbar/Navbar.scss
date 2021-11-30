@@ -147,16 +147,41 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(70, 60, 69, 0.836);
+  background-color: #4f5d7691;
+  opacity: 100%;
   z-index: 1;
   transform: translateY(-110vh);
   transition: transform 1s;
 }
 .mobile-navbar.active {
   transform: translateY(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 700px) {
+  .navbar1{
+  .navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    .navbar-item{
+      margin-top: 10px;
+      height: 20%;
+      width: 100%;
+      font-size: 20px;
+      background-color: #1c3041;
+    }
+  }}
+  .navbar {
+  
+    height: 70px;
+  
+  }
   .frame {
     display: block;
   }

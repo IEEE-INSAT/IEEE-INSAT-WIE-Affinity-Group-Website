@@ -10,15 +10,36 @@ import svg1 from "../../svgs/1.svg";
 import svg2 from "../../svgs/2.svg";
 import svg3 from "../../svgs/3.svg";
 import Img from "../../components/img-slide/Img";
-
+import PhoneActivity from "./PhoneActivity/PhoneActivity";
 const Showactivities = () => {
-  var n =297 ;
+  function ImagesSlide() {
+    if (window.innerWidth < 800) {
+      return (
+        <>
+        <PhoneActivity></PhoneActivity>
+        </>
+      );
+    } else {
+      return (
+        <>
+          {" "}
+          <Img pic={pic1} num={1} top={100} />
+          <Img pic={pic2} num={2} top={170} right={5} />
+          <Img pic={pic3} num={3} top={209} right={21} />
+          <Img pic={pic4} num={4} top={340} right={-1} />
+          <Img pic={pic1} num={5} top={332} right={42} />
+          <Img pic={pic5} num={7} top={270} right={5} left={23} />
+          <Img pic={pic2} num={8} top={n} left={10} />
+        </>
+      );
+    }
+  }
+
+  var n = 297;
   if (window.innerWidth < 800) {
-   
-    n=297;
+    n = 297;
   } else {
-  
-    n=330;
+    n = 330;
   }
   useEffect(() => {
     function inViewPort(el) {
@@ -36,6 +57,7 @@ const Showactivities = () => {
             document.documentElement.clientWidth) /* or $(window).width() */
       );
     }
+    if(window.innerWidth>700){
     function value(num, i) {
       list[num].style.transform = `translateY(-${i}px)`;
     }
@@ -68,11 +90,11 @@ const Showactivities = () => {
     var k = 0;
     var e = 190;
     if (window.innerWidth < 800) {
-      i =1;
-      n=297;
+      i = 1;
+      n = 297;
     } else {
       i = 2;
-      n=350;
+      n = 350;
     }
 
     window.addEventListener("scroll", () => {
@@ -139,7 +161,7 @@ const Showactivities = () => {
       }
       lastscroll = containerActivities[0].getBoundingClientRect().y;
       lastvalue = document.documentElement.scrollTop - offset;
-    });
+    });}
   }, []);
   return (
     <div className="big-container-activities">
@@ -159,18 +181,11 @@ const Showactivities = () => {
               <div>of WIE threw OUR amazing activities</div>{" "}
             </h1>
             <div className="link">
-              <h2 className="element6"> get to know more ...</h2>
+              <h2 className="element6"> And there is more ...</h2>
             </div>
           </div>
           <div className="list">
-            <Img pic={pic1} num={1} top={100} />
-            <Img pic={pic2} num={2} top={170} right={5} />
-            <Img pic={pic3} num={3} top={209} right={21} />
-            <Img pic={pic4} num={4} top={340} right={-1} />
-            <Img pic={pic1} num={5} top={332} right={42} />
-            <Img pic={pic5} num={7} top={270} right={5} left={23} />
-            <Img pic={pic2} num={8} top={n} left={10} />
-
+            {ImagesSlide()}
             <img className="svg svg1" src={svg1} alt="" />
             <img className="svg svg2" src={svg2} alt="" />
             <img className="svg svg3" src={svg3} alt="" />

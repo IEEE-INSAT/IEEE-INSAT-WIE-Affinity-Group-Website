@@ -1,17 +1,27 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./More.scss";
 import Rubon from "../../components/Rubon/Rubon";
 import Slider from "../../components/slider/Slider";
 import Choice from "../../components/choice/Choice";
 const More = () => {
   const [up, setup] = useState(false);
-  const [Phone,setPhone] = useState(false);
+  const [Phone, setPhone] = useState(false);
+  function checkWidth() {
+    if (window.innerWidth < 800) {
+      setPhone(true);
+    } else {
+      setPhone(false);
+    }
+  }
 
- 
   useEffect(() => {
-    if (window.innerWidth<700){
-    setPhone(true)
-  } function inViewPort(el) {
+    checkWidth();
+    window.addEventListener("resize", () => {
+      checkWidth();
+    });
+  }, [Phone]);
+  useEffect(() => {
+    function inViewPort(el) {
       var rect = el.getBoundingClientRect();
 
       return (
@@ -36,24 +46,21 @@ const More = () => {
     var t = 0;
     var lastscroll = 0;
 
-    window.addEventListener(
-      "scroll",
-      () => {
-       
-          if (list[6].getBoundingClientRect().y < 100) {
-          setup(true)
-            } else {
-              setup(false)
-            }
-
-           
-      },
-      []
-    );
-  });
+    // window.addEventListener(
+    //   "scroll",
+    //   () => {
+    //     if (list[6].getBoundingClientRect().y < 100) {
+    //       setup(true);
+    //     } else {
+    //       setup(false);
+    //     }
+    //   },
+    //   []
+    // );
+  }, []);
 
   return (
-    <div className={`relative ${up? 'up' : ''}` }>
+    <div className={`relative ${up ? "up" : ""}`}>
       <div className="inside"></div>
       <div className="more-container">
         <div className="rubonHolder">
@@ -66,8 +73,7 @@ const More = () => {
         </div>
         <div className="rectangle"></div>
         <div className="wrapper-containere">
-          
-         <Choice phone={Phone}></Choice>
+          <Choice phone={Phone}></Choice>
         </div>
       </div>
     </div>

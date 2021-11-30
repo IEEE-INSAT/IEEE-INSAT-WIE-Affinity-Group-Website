@@ -75,10 +75,10 @@ const Navbar = () => {
           <li className="navbar-item li1">News</li>
           <li className="navbar-item li2">
             {" "}
-            <Link to="/team">Our Team</Link>
+            <Link to="/">Our Team</Link>
           </li>
           <li className="navbar-item li3">
-            <Link to="/activities">Activities</Link>
+            <Link to="/">Activities</Link>
           </li>
           <li className="navbar-item li4">Events Timeline</li>
         </ul>

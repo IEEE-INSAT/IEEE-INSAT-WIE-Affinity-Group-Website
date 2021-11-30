@@ -1,89 +1,80 @@
-import React, { useEffect, useState } from 'react'
-import './Activities.scss'
-import img1 from "../../pics/1.jpg"
-import img2 from "../../pics/2.jpg"
-import img3 from "../../pics/31.jpg"
-import img4 from "../../pics/4.jpg"
-import img5 from "../../pics/41.jpg"
-import img6 from "../../pics/3.jpg"
-import img7 from "../../pics/11.jpg"
-import img8 from "../../pics/5.png"
-import svg from "../../images/girl.svg"
-
-
+import React, { useEffect, useState } from "react";
+import "./Activities.scss";
+import img1 from "../../pics/1.jpg";
+import img2 from "../../pics/2.jpg";
+import img3 from "../../pics/31.jpg";
+import img4 from "../../pics/4.jpg";
+import img5 from "../../pics/41.jpg";
+import img6 from "../../pics/3.jpg";
+import img7 from "../../pics/11.jpg";
+import img8 from "../../pics/5.png";
+import svg from "../../images/girl.svg";
 
 const Activities = () => {
-
-
-
-useEffect(()=> {   
-
-    const images= document.getElementsByClassName("act-img");
-    const texts= document.getElementsByClassName("textt");
-    const filters = document.getElementsByClassName("filter")
-    const navbar =document.getElementsByClassName("nav-transform");
-    const navbar1 =document.getElementsByClassName("navbar1");
-    const body= document.querySelector("body");
+  useEffect(() => {
+    const images = document.getElementsByClassName("act-img");
+    const texts = document.getElementsByClassName("textt");
+    const filters = document.getElementsByClassName("filter");
+    const navbar = document.getElementsByClassName("nav-transform");
+    const navbar1 = document.getElementsByClassName("navbar1");
+    const body = document.querySelector("body");
     const shortcuts = document.getElementsByClassName("shortcut");
     const titles = document.getElementsByClassName("title");
     const overlay = document.getElementsByClassName("overlay1");
- const container = document.getElementsByClassName("container-cylinder");
- const box = document.getElementsByClassName("box");
- const cylinder = document.getElementsByClassName("cylinder");
- const activities = document.getElementsByClassName("activities-container");
+    const container = document.getElementsByClassName("container-cylinder");
+    const box = document.getElementsByClassName("box");
+    const cylinder = document.getElementsByClassName("cylinder");
+    const activities = document.getElementsByClassName("activities-container");
 
+    overlay[0].style.transform = "translateY(0)";
+    navbar[0].style.transform = `translateY(0)`;
+    body.style.overflow = "hidden";
+    var pos = -1;
+    var pos1 = 0;
+    function changeSmaller(position) {
+      if (position == images.length) {
+        position = 0;
+      }
+      images[position].style.opacity = "1";
 
-
-overlay[0].style.transform="translateY(0)";
-    navbar[0].style.transform=`translateY(0)`;
-    body.style.overflow="hidden";
-var pos = -1;
-var pos1=0
-function changeSmaller(position){
-   
-    if (position==images.length){position=0}
-images[position].style.opacity="1"
-
-images[position].classList.remove("goback")
-    images[position].classList.add("showsmall")
-filters[position].classList.add("showsmall")
-filters[position].classList.remove("goback")
-
-
-}
-    function changeBigger() {
- 
-        moveout(pos)
-        pos++;
-        if (pos==images.length){pos=0;}
-        images[pos].classList.add("show")
-filters[pos].classList.add("show")
-filters[pos].classList.remove("showsmall")
-
-        images[pos].classList.remove("showsmall")
-        changeSmaller(pos+1)
-        texts[pos].classList.add("show-text")
-        shortcuts[pos].classList.add("highlight")
-        titles[pos].classList.add("show-title")
+      images[position].classList.remove("goback");
+      images[position].classList.add("showsmall");
+      filters[position].classList.add("showsmall");
+      filters[position].classList.remove("goback");
     }
-function moveout (position) {
-    if(pos>=0){
-images[position].classList.add ('moveout')
-images[position].classList.remove("show")
-filters[position].classList.add("moveout")
-filters[position].classList.remove("show")
+    function changeBigger() {
+      moveout(pos);
+      pos++;
+      if (pos == images.length) {
+        pos = 0;
+      }
+      images[pos].classList.add("show");
+      filters[pos].classList.add("show");
+      filters[pos].classList.remove("showsmall");
 
-texts[pos].classList.remove("show-text")
-shortcuts[pos].classList.remove("highlight")
-titles[pos].classList.remove("show-title")
+      images[pos].classList.remove("showsmall");
+      changeSmaller(pos + 1);
+      texts[pos].classList.add("show-text");
+      shortcuts[pos].classList.add("highlight");
+      titles[pos].classList.add("show-title");
+    }
+    function moveout(position) {
+      if (pos >= 0) {
+        images[position].classList.add("moveout");
+        images[position].classList.remove("show");
+        filters[position].classList.add("moveout");
+        filters[position].classList.remove("show");
 
-images[position].style.opacity="0"
-setTimeout(()=> {
-images[position].classList.remove ('moveout')
+        texts[pos].classList.remove("show-text");
+        shortcuts[pos].classList.remove("highlight");
+        titles[pos].classList.remove("show-title");
 
-},1000)
-
-}}
+        images[position].style.opacity = "0";
+        setTimeout(() => {
+          images[position].classList.remove("moveout");
+        }, 1000);
+      }
+    }
 
     // window.addEventListener("wheel", ()=> {
     //     changeBigger()
@@ -98,98 +89,102 @@ images[position].classList.remove ('moveout')
     // })
 
     for (let index = 0; index < shortcuts.length; index++) {
-        shortcuts[index].addEventListener("click", ()=> {
-            while (index!= pos) {
-                changeBigger()
-                
-            }
-    })
-      
-  };
-  changeBigger()
+      shortcuts[index].addEventListener("click", () => {
+        while (index != pos) {
+          changeBigger();
+        }
+      });
+    }
+    changeBigger();
+  }, []);
 
-},[])
-
-
-
-    return (
-        <>
-        <div className="activities-container">
-            <div className="container">
-            <div className="img-container">
-              
-          <div className="">
-            <img className="act-img act-img1" src={img1} alt="" />
-            <div className="filter"></div>
+  return (
+    <>
+      <div className="activities-container">
+        <div className="container">
+          <div className="img-container">
+            <div className="">
+              <img className="act-img act-img1" src={img1} alt="" />
+              <div className="filter"></div>
             </div>
             <h1 className="title title1">Summer school</h1>
-          
-            <img className="act-img act-img2"src={img2} alt="" />
+
+            <img className="act-img act-img2" src={img2} alt="" />
             <div className="filter"></div>
 
             <h1 className="title title2">IEEE Day</h1>
 
-            <img className="act-img act-img3"src={img3} alt="" />
+            <img className="act-img act-img3" src={img3} alt="" />
             <div className="filter"></div>
 
             <h1 className="title title3">Star Program</h1>
 
-            <img className="act-img act-img4"src={img4} alt="" />
+            <img className="act-img act-img4" src={img4} alt="" />
             <div className="filter"></div>
 
             <h1 className="title title4">title event4</h1>
 
-            <img className="act-img act-img5"src={img5} alt="" />
+            <img className="act-img act-img5" src={img5} alt="" />
             <div className="filter"></div>
 
             <h1 className="title title5">title event5</h1>
+          </div>
+          <div className="textt text1">
+            <h3>Summer School Workshops !</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              iusto et necessitatibus architecto aut ?
+            </p>
+          </div>
+          <div className="textt text2">
+            <h3>IEEE Day Event</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              iusto et necessitatibus architecto aut ?
+            </p>
+          </div>
+          <div className="textt text3">
+            <h3>WIE Star Program</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              iusto et necessitatibus architecto aut ?
+            </p>
+          </div>
+          <div className="textt text4">
+            <h3>She Solves </h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              iusto et necessitatibus architecto aut ?
+            </p>
+          </div>
+          <div className="textt text5">
+            <h3>She Solves !</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              iusto et necessitatibus architecto aut ?
+            </p>
+          </div>
 
-</div>
-                <div className="textt text1">
-                <h3>Summer School Workshops !</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Nemo iusto et necessitatibus architecto aut ?</p>
-</div>
-<div className="textt text2">
-                <h3>IEEE Day Event</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Nemo iusto et necessitatibus architecto aut ?</p>
-</div>
-<div className="textt text3">
-                <h3>WIE Star Program</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Nemo iusto et necessitatibus architecto aut ?</p>
-</div>
-<div className="textt text4">
-                <h3>She Solves </h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Nemo iusto et necessitatibus architecto aut ?</p>
-</div>
-<div className="textt text5">
-                <h3>She Solves !</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Nemo iusto et necessitatibus architecto aut ?</p>
-
-</div>
-
-<div className="shortcuts">
-    <h3 className="shortcut shortcut1">title 1</h3>
-    <h3 className="shortcut shortcut2">title 2</h3>
-    <h3 className="shortcut shortcut3">title 3</h3>
-    <h3 className="shortcut shortcut4">title 4</h3>
-    <h3 className="shortcut shortcut5">title 4</h3>
-</div>
-<div className="line1"></div>
-            </div>
-            
+          <div className="shortcuts">
+            <h3 className="shortcut shortcut1">title 1</h3>
+            <h3 className="shortcut shortcut2">title 2</h3>
+            <h3 className="shortcut shortcut3">title 3</h3>
+            <h3 className="shortcut shortcut4">title 4</h3>
+            <h3 className="shortcut shortcut5">title 4</h3>
+          </div>
+          <div className="line1"></div>
         </div>
-   
-   <div className="container-cylinder">
-       <h1> <div>Check out our rich <span>program</span> filled with amazing <span>activities</span> ...</div> </h1>
-     
-   
+      </div>
 
-       {/* <svg classname="svg-girl" width="188" height="393" viewBox="0 0 188 393" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div className="container-cylinder">
+        <h1>
+          {" "}
+          <div>
+            Check out our rich <span>program</span> filled with amazing{" "}
+            <span>activities</span> ...
+          </div>{" "}
+        </h1>
+        {/* <svg classname="svg-girl" width="188" height="393" viewBox="0 0 188 393" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="undraw_Gaming_re_cma2 1" clip-path="url(#clip0)">
 <g id="girl">
 <path id="Vector" d="M139.885 163L90.8848 165L84.8848 132L126.885 119L139.885 163Z" fill="#FFB6B6"/>
@@ -217,29 +212,39 @@ images[position].classList.remove ('moveout')
 </clipPath>
 </defs>
 </svg> */}
+        <div className="cylinder">
+          <div className="box">
+            <span className="span1">
+              <img src={img1} />
+            </span>
+            <span className="span2">
+              <img src={img2} />
+            </span>
+            <span className="span3">
+              <img src={img3} />
+            </span>
+            <span className="span4">
+              <img src={img4} />
+            </span>
+            <span className="span5">
+              <img src={img5} />
+            </span>
+            <span className="span6">
+              <img src={img6} />
+            </span>
+            <span className="span7">
+              <img src={img7} />
+            </span>
+            <span className="span8">
+              <img src={img8} />
+            </span>
+          </div>
+        </div>{" "}
+        <h3>click anywhere to continue</h3>
+      </div>
+      <div className="overlay1"></div>
+    </>
+  );
+};
 
-   <div className="cylinder">
-        <div className="box">
-
-            <span className="span1" ><img src={img1}/></span>
-            <span className="span2"><img src={img2}/></span>
-            <span className="span3"><img src={img3}/></span>
-            <span className="span4"><img src={img4}/></span>
-            <span className="span5"><img src={img5}/></span>
-            <span className="span6"><img src={img6}/></span>
-            <span className="span7"><img src={img7}/></span>
-            <span className="span8"><img src={img8}/></span>
-
-
-
-           
-        </div>
-   </div>   <h3>click anywhere to continue</h3></div>
-   <div className="overlay1"></div>
-   
-   </>
-   
-   )
-}
-
-export default Activities
+export default Activities;

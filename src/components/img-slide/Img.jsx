@@ -5,7 +5,7 @@ const Img = ({pic,num, top , right, left}) => {
         var element= document.querySelectorAll(`.element${num}`);
         element[0].style.setProperty("--top",top+"%");
         element[0].style.setProperty("--right",right+"%");
-        element[0].style.setProperty("--left",left+"%");
+  
 
     }, [])
     return (
