@@ -22,14 +22,14 @@ const Showactivities = () => {
     } else {
       return (
         <>
-          {" "}
+          
           <Img pic={pic1} num={1} top={100} />
-          <Img pic={pic2} num={2} top={170} right={5} />
-          <Img pic={pic3} num={3} top={209} right={21} />
-          <Img pic={pic4} num={4} top={340} right={-1} />
-          <Img pic={pic1} num={5} top={332} right={42} />
-          <Img pic={pic5} num={7} top={270} right={5} left={23} />
-          <Img pic={pic2} num={8} top={n} left={10} />
+            <Img pic={pic2} num={2} top={170} right={5} />
+            <Img pic={pic3} num={3} top={209} right={21} />
+            <Img pic={pic4} num={4} top={340} right={-1} />
+            <Img pic={pic1} num={5} top={332} right={42} />
+            <Img pic={pic5} num={7} top={270} right={45}  />
+            <Img pic={pic2} num={8} top={n} left={10} />
         </>
       );
     }
@@ -39,7 +39,7 @@ const Showactivities = () => {
   if (window.innerWidth < 800) {
     n = 297;
   } else {
-    n = 330;
+    n = 315;
   }
   useEffect(() => {
     function inViewPort(el) {
@@ -57,7 +57,7 @@ const Showactivities = () => {
             document.documentElement.clientWidth) /* or $(window).width() */
       );
     }
-    if(window.innerWidth>700){
+    if(window.innerWidth>800){
     function value(num, i) {
       list[num].style.transform = `translateY(-${i}px)`;
     }
@@ -94,7 +94,7 @@ const Showactivities = () => {
       n = 297;
     } else {
       i = 2;
-      n = 350;
+      n = 315;
     }
 
     window.addEventListener("scroll", () => {

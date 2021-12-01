@@ -2,30 +2,45 @@ import { forEach } from "async";
 import React, { useEffect } from "react";
 import "./Aboutus.css";
 import "./aboutus.scss";
+import Footer from "../Footer/Footer";
 import Intro from "../first/Intro";
 import HorizontalScroll from "react-scroll-horizontal";
 import Gallery from "../scroll/Gallery";
-import Footer from "../footer/Footer";
-import Latest from "../Carousel/Latest";
+import Latest from "../News/Carousel/Latest";
 import Facts from "../facts/Facts";
 import News from "../News/News";
 import More from "../More/More";
 import Showactivities from "../main-activities/Showactivities";
 const Aboutus = () => {
+ function PhoneOrPc(params) {
+    if (window.innerWidth>800){
+      return ( <> <Showactivities></Showactivities>
+       <News></News> 
+       <More></More>
+        </>)
+  }
+  else {
+    return ( <> 
+     <News></News>
+      <More></More>
+     </>)
+  }
+ }
+ 
+  
   return (
-    <div>
+    <> 
       <div className="transform">
+
         <Intro></Intro>
         {/* <Latest></Latest> */}
 
-        <Showactivities></Showactivities>
-        <More></More>
-        <News></News>
+      {PhoneOrPc()}
+      <Footer></Footer>
         {/* <Facts></Facts> */}
-        {/* <Footer></Footer> */}
         {/* <Gallery></Gallery> */}
       </div>
-    </div>
+    </>
   );
 };
 

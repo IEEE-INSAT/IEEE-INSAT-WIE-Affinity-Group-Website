@@ -1,56 +1,59 @@
 @media (max-width: 1000px) {
-    .more-container .slider-container {
-      display: grid;
-      grid-template-rows: repeat(20, 5%);
-      grid-template-columns: repeat(10, 10%);
-    }
-    .more-container {
-      height:220vh !important;
-    }
-    .rightArrow,
-    .leftArrow {
-      display: none;
-    }
+  .more-container .slider-container {
+    display: grid;
+    grid-template-rows: repeat(20, 5%);
+    grid-template-columns: repeat(10, 10%);
   }
-  
-  html,
-  body,
-  .wrapper-containere {
-    height: 100%;
-    width: 100%;
+  .more-container {
+    height:250vw!important;
   }
-  .slides-containere {
-    transform: translateY(5%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
+  .rightArrow,
+  .leftArrow {
+    display: none;
   }
-  .slidee {
-    width: 20%;
-    transition: 1s all;
-    background-color: blue;
-    margin: -2.5%;
-    max-height: 300px;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  }
-  .slidee:hover {
-  }
-  .first-containere,
-  .second-containere {
-    min-width: 100%;
-    transition: 1s all;
-    transform: translate(52%, 35%);
-    height: 100%;
-    display: flex;
-    align-items: flex-sta0rt;
-    justify-content: center;
-  }
-  
-  
+}
+
+html,
+body,
+.wrapper-containere {
+  height: 100%;
+  width: 100%;
+}
+.slides-containere {
+  transform: translateY(5%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+.slidee {
+  width: 20%;
+  transition: 1s all;
+  background-color: blue;
+  margin: -2.5%;
+  max-height: 300px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+.slidee:hover {
+}
+.first-containere,
+.second-containere {
+  min-width: 100%;
+  transition: 1s all;
+  transform: translate(52%, 35%);
+  height: 100%;
+  display: flex;
+  align-items: flex-sta0rt;
+  justify-content: center;
+}
+
+
   @media (max-width: 800px) {
+    .more-container{
+      height: 180vh !important;
+    }
     .slides-containere {
       // display: flex;
       position: absolute;
@@ -194,5 +197,15 @@
    @media (max-width:1250px) {
     .slidee {
       height: 35% !important;
+    }
+  }
+  @media (min-width:300px) and (max-width: 800px) {
+    .more-container {
+      height:200vh!important;
+    }
+  }
+  @media (max-width: 800px) and (min-width:600px) {
+    .more-container {
+      height:250vw!important;
     }
   }

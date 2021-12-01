@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Slide from "./Slide/Slide";
 import "./Slider.scss";
+import arrowLeft from "../../svgs/Group.svg"
+import arrowRight from "../../svgs/Vector.svg"
+
 import img1 from "../../teampics/pic1.jpg";
 import img2 from "../../teampics/pic2.jpg";
 import img3 from "../../teampics/pic3.png";
@@ -102,8 +105,8 @@ const Slider = () => {
   }, []);
   return (
     <div className="container-container">
-      <img src={rightArrow} className="rightArrow" alt="right Arrow" />
-      <img src={leftArrow} className="leftArrow" alt="Left Arrow" />
+      <img src={arrowLeft} className="rightArrow" alt="right Arrow" />
+      <img src={arrowRight} className="leftArrow" alt="Left Arrow" />
 
       <div className="slides-containere">
         <div className="first-containere">

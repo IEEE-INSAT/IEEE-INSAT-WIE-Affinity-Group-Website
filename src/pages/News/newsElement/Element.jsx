@@ -3,7 +3,7 @@ import "./Element.scss";
 import svg1 from "../../../svgs/Workshop.svg";
 import svg2 from "../../../svgs/destination.svg";
 
-const Element = ({ num, title, text }) => {
+const Element = ({ num, title, text, current }) => {
   function svgs() {
     if (num == "1") {
       return svg1;
@@ -12,7 +12,7 @@ const Element = ({ num, title, text }) => {
   }
 
   return (
-    <div className={`ElementContainer elementcontainer${num}`}>
+    <div className={`ElementContainer elementcontainer${num} ${current ? "current" : ""}`}>
       <div className="containerSVG">
         <h2>{title}</h2>
         <div className="containerText">

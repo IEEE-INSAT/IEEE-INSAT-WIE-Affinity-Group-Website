@@ -1,0 +1,60 @@
+.container-Latest-Activities {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+  .rubonLatest {
+    position: absolute;
+    top: 0;
+        height: 50px;
+  }
+  .rubonTitle {
+    z-index: 9;
+    width: 40%;
+    left: -10%;
+    font-family: quicksand;
+    max-height: 60px;
+    transform: rotate(-25deg) translate(-12%) ;
+    font-size: 2vw;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cfa2b1;
+
+  }
+  .carouselLatest {
+    height: 100%;
+    width: 100%;
+   overflow: hidden;
+   margin: 70px 0;
+
+    .carouselWrapper {
+      //  width: 300px;
+       height: 100%;
+       width: 99vw;
+       display: flex;
+      
+      }
+  }
+}
+.controls {
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  .control {
+    margin: 10px;
+    height: 10px;
+  background-color: #1C3041;
+z-index: 999;
+    width: 80px;
+    max-width: 80px;
+  }
+  .control:hover{
+    cursor: pointer;
+  }
+}

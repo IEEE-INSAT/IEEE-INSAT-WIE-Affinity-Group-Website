@@ -40,8 +40,8 @@
   .leftArrow {
     position: absolute;
     right: 0;
-    width: 30px;
-    height: 30px;
+    width: 7%;
+    height: 50px;
     z-index: 99;
     top: 50%;
     transition: all 0.5s;
@@ -54,13 +54,14 @@
 
   }
   .rightArrow {
-    width: 30px;
+    width: 7%;
+    height: 50px;
+
     z-index: 99;
     margin: 10px;
     top: 50%;
     transition: all 0.5s;
 
-    height: 30px;
     position: absolute;
     left: 0;
   }

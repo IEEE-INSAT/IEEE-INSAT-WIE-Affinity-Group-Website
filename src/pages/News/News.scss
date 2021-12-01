@@ -25,13 +25,35 @@ margin-top: 50px;
 
 
 }
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(6, 16, 77, 0.548);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .titlesNews {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width:    100vw ;}}
+
 }}
-.arrow {
+.arrow,.arrowLeft {
     position: absolute;
     right: 0;
-    top: 55%;
-    width: 7%;
+    top: 30%;
+    width: 5%;
     z-index: 9;
     height: 50px;
     cursor: pointer;
+}
+.arrowLeft {
+    left: 0;
 }

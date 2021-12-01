@@ -1,0 +1,145 @@
+.container-imgLatest {
+  width: 99vw;
+  height: 35vw;
+
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: flex-start;
+  transition: 1s all, 2s opacity;
+  img {
+    position: absolute;
+    transition: 1s all;
+    transform: translate(0px);
+
+    border-radius: 1.2vw;
+
+  }
+
+  .show,img {
+    top: 4%;
+    right: 35%;
+    width: 60%;
+    height: 35vw;
+    transform: translate(0px);
+
+  } 
+  .small {
+    top: 8%;
+    right: 5%;
+    height: 20vw;
+    max-height: 180px;
+    opacity: 1;
+    width: 20%;
+    min-width: 150px;
+    transform: translate(0px);
+opacity: 0.6;
+border-radius: 1vw;
+
+  }
+  .hide {
+      transform: translate(-150%);
+      opacity: 0;
+
+  }
+  .goback {
+    top: 10%;
+
+    transform: translate(120%);
+
+  }
+}
+.img1 {
+    z-index: 3;
+}
+
+.img2 {
+    z-index: 2;
+}
+
+.img3 {
+    z-index: 5;
+}
+.filler {
+    height: 35vw;
+  width: 100%;}
+  .textAct {
+      font-size:16px;
+      width: 30vw;
+      font-size:1.4vw;
+      padding: 10px;
+      font-family: quicksand;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      height: 10vw;
+      border-radius: 1vw;
+      background-color: #cfa2b198;
+      position: absolute;
+      bottom: 0;
+      right: 1%;
+      transition: 1s all;
+  }
+
+
+.textAct.hidetext {
+    transform: translate(120%);  
+    }
+      .textAct.showtext {
+transform: translate(0%);  
+}
+
+  
+  @media (max-width:870px) {
+    .container-imgLatest {
+        .textAct {
+            padding: 5px;
+            width: 30vw;
+            height:fit-content;
+        }
+        .show,img {
+            top: 0%;
+            right: 35%;
+            width: 63%;
+            height: 38vw;
+            transform: translate(0px);
+        
+          } 
+      .small {
+      top: 5%;
+        height: 16vw;
+        max-height: 180px;
+      }}
+      }
+      @media (max-width:600px) {
+        .controls{
+            .control {
+                max-width: 60px;
+            }
+        }
+  .container-imgLatest {
+      .textAct {
+        font-size:1.4vw;
+        height: 7vw;
+        bottom: 0;
+        right: 1%;
+          width: 20vw;
+          height:fit-content;
+      }
+      .show,img {
+          top: 0%;
+    right: 25%;
+  
+          width: 70%;
+          height: 38vw;
+          transform: translate(0px);
+      
+        } 
+    .small {
+    top: 5%;
+      height: 10vw;
+      max-height: 130px;
+      width: 10%;
+  min-width: 70px;
+    }}
+    }

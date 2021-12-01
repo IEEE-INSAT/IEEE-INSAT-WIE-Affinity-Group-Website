@@ -17,9 +17,7 @@ const ImgPhone = ({ pic, num, top, right, state ,left }) => {
       <img
     
         src={pic}
-        className={`elementP-activities elementP${num} elementP-img 
-
-        `}
+        className={`elementP-activities elementP${num} elementP-img `}
       />
     </>
   );

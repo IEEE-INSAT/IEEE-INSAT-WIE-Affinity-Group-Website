@@ -22,6 +22,7 @@ const PhoneActivity = () => {
   }
 
   useEffect(() => {
+
     const images = document.getElementsByClassName("elementP-img");
 
     window.addEventListener("scroll", () => {
