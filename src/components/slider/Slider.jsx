@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Slide from "./Slide/Slide";
 import "./Slider.scss";
-import arrowLeft from "../../svgs/Group.svg"
 import arrowRight from "../../svgs/Vector.svg"
+import arrowLeft from "../../svgs/Group.svg"
+
 
 import img1 from "../../teampics/pic1.jpg";
 import img2 from "../../teampics/pic2.jpg";
@@ -11,7 +12,7 @@ import img4 from "../../teampics/pic5.png";
 import img5 from "../../teampics/pic4.png";
 import img6 from "../../teampics/pic6.jpg";
 import img7 from "../../teampics/pic7.jpg";
-import rightArrow from "../../teampics/left.png";
+import rightArrow from "../../svgs/Vector.svg";
 import leftArrow from "../../teampics/right.png";
 
 const Slider = () => {

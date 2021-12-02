@@ -14,7 +14,7 @@ const Main = () => {
 
                 <div className="overlay">
                 <div className="titles">
-            <h1 className="maintitle">  IEEE : The <span>F</span>uture Is <span>F</span>emale</h1>
+            <h1 className="maintitle">  IEEE : The <span>W</span>omen In <span>E</span>ngineering</h1>
             <h2 className="secondtitle">Insat student branch</h2>
             </div></div>
             </div>    

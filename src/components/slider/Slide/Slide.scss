@@ -256,26 +256,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: fit-content;
     height:30%;
     border-radius: 10px;
     background-color: #fce8bfbb;
     margin: 0 0 10px 0;
+    padding: 0 2px;
 
     h1 {
-      font-size: 20px;
+      font-size: calc(min(20px , 5vw));
     }
+   
   }
-  .wrapper-discription {
+  .wrapper-discription { 
+    h5 {
+      font-size: calc(min(18px , 4vw));
+      padding: 0 2px;
+
+    }
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
-    width: 60%;
+    width: fit-content;
     height: 30%;
     border-radius: 10px;
     background-color:#8527466e;
     transition: 1s all;
+    padding: 0 5px;
+
   }
 }
 .container-info1-show,.container-info2-show,.container-info3-show,.container-info4-show,

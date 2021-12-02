@@ -86,7 +86,6 @@ const SliderPhone = () => {
             inViewPort(slides[i]) &&
             slides[i].getBoundingClientRect().y < window.innerHeight / 2
           ) {
-            console.log("waaaaaaaaaa", i);
            
              slides[i].classList.add("show");
   //  show(slides[i]);

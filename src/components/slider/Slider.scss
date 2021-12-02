@@ -5,7 +5,7 @@
   display: flex;
   width: 100%;
   height: 100%;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
   .slider-container {
@@ -27,7 +27,7 @@
       position: relative;
       display: flex;
       align-items: center;
-      transform: translate(50%,-10%);
+      transform: translate(50%, -10%);
       justify-content: center;
     }
   }
@@ -37,21 +37,26 @@
   // .second-container{
   //   background-color: black;
   // }
-  .leftArrow {
-    position: absolute;
-    right: 0;
-    width: 7%;
-    height: 50px;
+  .leftArrow,
+  .rightArrow {
+    transform: translateY(-10%);
+    width: 8%;
+    height: 8%;
     z-index: 99;
     top: 50%;
-    transition: all 0.5s;
-
     margin: 10px;
+    transition: all 0.5s;
+    position: absolute;
+  }
+  .leftArrow {
+    right: 0;
+  }
+  .rightArrow {
+    left: 0;
   }
   .leftArrow:hover,
   .rightArrow:hover {
     cursor: pointer;
-
   }
   .rightArrow {
     width: 7%;
