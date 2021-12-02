@@ -4,7 +4,8 @@ import "./Navbar.scss";
 import Team from "../../pages/Team/Team";
 import Home from "../../pages/Home/Home";
 import Activities from "../../pages/activities/Activities";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {Link} from 'react-scroll'
 
 const Navbar = () => {
   const checkbox = document.getElementsByClassName("navcheck");
@@ -68,19 +69,22 @@ const Navbar = () => {
         <div className="mobile-navbar"> </div>
 
         <h1 className="logo">
-          <Link to="/home">W.i.e</Link>
+          <Link to="home" smooth={true} duration={100} offset={-200}>W.i.e</Link>
         </h1>
 
         <ul className="ul navbar-list">
-          <li className="navbar-item li1">News</li>
+           <li className="navbar-item li3">
+            <Link to="rubon4" smooth={true} duration={200} >Who are Wie</Link>
+          </li> 
+             <Link to="rubon5" smooth={true} duration={200} offset={-100} className="navbar-item li4">Activities</Link>
+          <Link to="rubon1" smooth={true} duration={200} offset={-80} className="navbar-item li1">News</Link>
+          
           <li className="navbar-item li2">
             {" "}
-            <Link to="/">Our Team</Link>
+            <Link to="rubon7" smooth={true} duration={200} offset={-100}>Our Team</Link>
           </li>
-          <li className="navbar-item li3">
-            <Link to="/">Activities</Link>
-          </li>
-          <li className="navbar-item li4">Events Timeline</li>
+       
+        
         </ul>
 
         <div class="frame">

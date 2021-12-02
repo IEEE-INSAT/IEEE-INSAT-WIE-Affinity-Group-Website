@@ -60,7 +60,7 @@ const More = () => {
   }, []);
 
   return (
-    <div className={`relative ${up ? "up" : ""}`}>
+    <div id="team" className={`relative ${up ? "up" : ""}`}>
       <div className="inside"></div>
       <div className="more-container">
         <div className="rubonHolder">

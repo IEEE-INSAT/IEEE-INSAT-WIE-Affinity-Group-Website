@@ -34,7 +34,7 @@ const Latest = () => {
   }
 
   return (
-    <div className="container-Latest-Activities">
+    <div  className="container-Latest-Activities">
       <div className="controls">
         <div
           className="control1 control"
@@ -57,9 +57,10 @@ const Latest = () => {
       </div>
       <div className=" rubonLatest ">
         <Rubon
+        
           text="Latest Activities. Latest Activities. Latest Activities. Latest Activities. Latest Activities.Latest Activities. Latest Activities. Latest Activities. Latest Activities. Latest Activities. Latest Activities. Latest Activities. Latest Activities. Latest Activities. Latest Activities. Latest Activities. Latest Activities. Latest Activities. Latest Activities. "
           deg={0}
-          num={7}
+          num={1}
         ></Rubon>
       </div>
       <div className=" rubonLatest rubonTitle">Latest Activities</div>

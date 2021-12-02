@@ -66,3 +66,7 @@ displa
   font-family:Quicksand;
   src: url(./fonts/Quicksand.ttf)
 }
+@font-face {
+  font-family:code;
+  src: url(./fonts/code.ttf)
+}

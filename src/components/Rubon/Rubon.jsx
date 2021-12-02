@@ -69,7 +69,7 @@ if (color=="pink"){
 
     },[])
     return (
-            <div className={`rubon${num} rubon`}>          <h1>{text}</h1>
+            <div className={`rubon${num} rubon`} id = {`rubon${num}`}>          <h1>{text}</h1>
             </div>
   
        

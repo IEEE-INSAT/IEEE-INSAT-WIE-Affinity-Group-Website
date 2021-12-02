@@ -6,7 +6,7 @@ import CardsAbout from './CardsAbout';
 import "./Intro.scss"
 const Intro = () => {
     return (
-        <div className="container-big">
+        <div id="home" className="container-big">
         <div className="firstcontainer">
         <div className="container">
                <div className="titles">
