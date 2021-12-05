@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import "./SlidePhone.scss";
 
-const SlidePhone = ({img,Name,position, num , state}) => {
+const SlidePhone = ({img,name,position, num , state}) => {
   useEffect(()=> {
     const firstSlide = document.getElementsByClassName("slidePhone1")
     const lastSlide = document.getElementsByClassName("slidePhone8")
@@ -20,7 +20,7 @@ const SlidePhone = ({img,Name,position, num , state}) => {
         <div className={`container-info container-info${num} ${state? `container-info${num}-showPhone`: ""}`}>
         <div className="wrapper-info">
           <div className="wrapper-name">
-             <h1>{Name}</h1>
+             <h1>{name}</h1>
           </div>
            <div className="wrapper-discription">
              <h5>{position}</h5>

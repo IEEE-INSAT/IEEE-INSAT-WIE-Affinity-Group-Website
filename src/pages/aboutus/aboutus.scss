@@ -66,3 +66,9 @@ div.biggest-container{
     }
    
  }}
+ @media (max-width: 800px) {
+    .firstcontainer {
+        .container {   
+        align-items: center;}}
+     
+ }

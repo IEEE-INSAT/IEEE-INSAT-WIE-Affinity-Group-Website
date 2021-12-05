@@ -6,7 +6,7 @@
   display: grid !important ;
   grid-template-rows: repeat(10,10%);
   grid-template-columns: repeat(10,10%);
-  svg {
+  svg , #svg1 {
     position: absolute;
   }
   .card {
@@ -51,9 +51,8 @@ transform: translate(5%);
     transform: translate(15%);
   
   }
-  svg {
-  }
-  svg#svg1 {
+  
+  #svg1 {
     top: -90%;
     left: -40%;
     height: 172%;
@@ -108,10 +107,19 @@ transform: translate(5%);
   transform-origin: center;
 
 }
+#leg2 {
+  animation: legMove2 2s 3s linear infinite alternate ;
+  transform-origin: center;
+}
 @keyframes legMove {
   0% { transform: rotate(20deg);}
   100%{ transform: rotate(0deg);}
 }
+@keyframes legMove2 {
+  0% { transform: rotate(-10deg);}
+  100%{ transform: rotate(0deg);}
+}
+
 
 
 
@@ -129,7 +137,7 @@ transform: translate(5%);
   height: 31%;
 }  height: 50vh;
   .card {
-    svg {
+    svg,#svg1  {
       max-width: 350px;
     }
  
@@ -155,7 +163,7 @@ transform: translate(5%);
    
     height: 70vh;}}
     @media (max-width: 300px) {
-      svg {
+      svg ,#svg1 {
         
       }
       .container-cards {

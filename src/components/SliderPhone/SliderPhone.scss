@@ -30,7 +30,6 @@ body,
 .slidee {
   width: 20%;
   transition: 1s all;
-  background-color: blue;
   margin: -2.5%;
   max-height: 270px;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
@@ -76,7 +75,7 @@ body,
       clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     }
     .slideePhone.slidePhone1 {
-      transform: translate(-30%);
+      transform: translate(-50%);
     }
     .slideePhone.slidePhone2 {
       transform: translate(55%, -35%);

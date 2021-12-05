@@ -7,6 +7,10 @@ import pic3 from "../../../pics/3.jpg";
 
 import SlidesCarousel from "./SlidesCarousel/SlidesCarousel";
 const Latest = () => {
+  const [nameEvent, setnameEvent] = useState("Latest Event")
+  const changeName=(name)=>{
+setnameEvent(name);
+  }
   useEffect(() => {
     const element = document.getElementsByClassName(`elementAct`);
 
@@ -63,13 +67,16 @@ const Latest = () => {
           num={1}
         ></Rubon>
       </div>
-      <div className=" rubonLatest rubonTitle">Latest Activities</div>
+      <div className=" rubonLatest rubonTitle">{nameEvent}</div>
 
       <div className="carouselLatest">
         <div className="carouselWrapper">
           <div className="filler"></div>
           <div className={` container-imgLatest`}>
             <SlidesCarousel
+              name="Summer School"
+
+            changeName={changeName}
               num={1}
               pic={pic1}
               text={
@@ -78,7 +85,11 @@ const Latest = () => {
               status={slide1}
             ></SlidesCarousel>
             <SlidesCarousel
+              name="IEEE Day"
+
               num={2}
+            changeName={changeName}
+
               pic={pic2}
               text={
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. mollitia quibusdam nobis esfacilis vel."
@@ -86,6 +97,8 @@ const Latest = () => {
               status={slide2}
             ></SlidesCarousel>
             <SlidesCarousel
+            changeName={changeName}
+              name="Star Program"
               num={3}
               pic={pic3}
               text={

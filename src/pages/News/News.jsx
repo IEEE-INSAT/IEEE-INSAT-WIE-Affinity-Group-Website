@@ -26,10 +26,8 @@ const News = () => {
         ></Rubon>
         <div className="container-elements">
           <Swiper
-            spaceBetween={50}
             slidesPerView={2}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
+
           >
             <SwiperSlide>
               <Element
@@ -48,9 +46,15 @@ const News = () => {
             </SwiperSlide>
             <SwiperSlide>
               <Element
-                num={2}
+                num={3}
                 title="Visits"
                 text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit atque eligendi at delectus quod hic illo molestias nulla dolore adipisci? Incidunt beatae possimus quibusdam reiciendis quis optio ipsam dolores deleniti? "
+              ></Element>
+            </SwiperSlide>
+            <SwiperSlide>
+            <Element
+                num={4}
+               
               ></Element>
             </SwiperSlide>
          

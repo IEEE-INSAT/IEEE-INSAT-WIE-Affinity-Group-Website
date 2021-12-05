@@ -6,10 +6,10 @@
   position: absolute;
   align-items: center;
   justify-content: flex-start;
-  transition: 1s all, 2s opacity;
+  transition: 1s all;
   img {
     position: absolute;
-    transition: 1s all;
+    transition: 0.7s all;
     transform: translate(0px);
 
     border-radius: 1.2vw;
@@ -22,6 +22,8 @@
     width: 60%;
     height: 33vw;
     transform: translate(0px);
+    transition: 0.7s all;
+
   }
   .small {
     top: 8%;

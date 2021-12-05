@@ -27,7 +27,7 @@ if (color=="pink"){
          if (rubons[0].getBoundingClientRect().bottom<700 && rubons[0].getBoundingClientRect().bottom>0){
         if (lastscroll > rubons[0].getBoundingClientRect().y ){ 
 
-         x+=7;
+         x+=4;
      rubon.style.transform =`translate(${x}px)`
      if (num%2){
      rubon.style.transform =`translate(-${x}px)`

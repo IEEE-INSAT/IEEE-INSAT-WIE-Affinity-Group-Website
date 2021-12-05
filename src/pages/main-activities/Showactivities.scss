@@ -101,7 +101,7 @@
 
         min-width: 400px;
         border-radius: 20px;
-        transition: 0.5s all;
+        transition: 0.7s all;
       }
     }
   }
@@ -145,7 +145,7 @@
     transform: translateY(20vw);
     font-family: campton;
     font-size: 2.5vw;
-    color: #ff9771c9;
+    color: #852747;
   }
 }
 
@@ -210,4 +210,10 @@
       }
     }
   }
+}
+@media (min-width: 1500px) {
+  .big-container-activities .container-activities .activities-wrapper .element-activities {
+    max-height: 400px;
+  }
+  
 }

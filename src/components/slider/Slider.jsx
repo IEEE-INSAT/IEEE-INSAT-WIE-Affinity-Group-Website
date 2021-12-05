@@ -12,6 +12,9 @@ import img4 from "../../teampics/pic5.png";
 import img5 from "../../teampics/pic4.png";
 import img6 from "../../teampics/pic6.jpg";
 import img7 from "../../teampics/pic7.jpg";
+import img8 from "../../teampics/pic8.jpg";
+import img9 from "../../teampics/pic9.svg";
+
 import rightArrow from "../../svgs/Vector.svg";
 import leftArrow from "../../teampics/right.png";
 
@@ -126,7 +129,7 @@ const Slider = () => {
             moveLeft={Slide1 || Slide2 ? true : false}
             img={img1}
             position={"chairwoman"}
-            Name={"Asma Hosni"}
+            name={"Asma Hosni"}
             num={1}
           ></Slide>
 
@@ -142,9 +145,9 @@ const Slider = () => {
               setSlide2False();
             }}
             moveLeft={Slide2 ? true : false}
-            img={img2}
-            position={"chairwoman"}
-            Name={"Asma Hosni"}
+            img={img8}
+            position={"Vice chairwoman"}
+            name={"Nawres Jouini"}
             num={2}
           ></Slide>
 
@@ -160,9 +163,9 @@ const Slider = () => {
               setSlide4(false);
             }}
             moveRight={Slide3 ? true : false}
-            img={img3}
-            position={"chairwoman"}
-            Name={"Asma Hosni"}
+            img={img2}
+            position={"General Secretary"}
+            name={"Ilef Maalouch"}
             num={3}
           ></Slide>
 
@@ -179,8 +182,8 @@ const Slider = () => {
             }}
             moveRight={Slide3 || Slide4 ? true : false}
             img={img4}
-            position={"chairwoman"}
-            Name={"Asma Hosni"}
+            position={"Treasurer"}
+            name={"Ameni Bchir"}
             num={4}
           ></Slide>
         </div>
@@ -198,9 +201,9 @@ const Slider = () => {
               setSlide1False();
             }}
             moveLeft={Slide1 || Slide2 ? true : false}
-            img={img7}
-            position={"chairwoman"}
-            Name={"Asma Hosni"}
+            img={img6}
+            position={"Training Manager"}
+            name={"Rania Bouwazra"}
             num={5}
           ></Slide>
 
@@ -216,9 +219,9 @@ const Slider = () => {
               setSlide2False();
             }}
             moveLeft={Slide2 ? true : false}
-            img={img6}
-            position={"chairwoman"}
-            Name={"Asma Hosni"}
+            img={img7}
+            position={"Media Manager"}
+            name={"Ahmed Cherif"}
             num={6}
           ></Slide>
 
@@ -234,9 +237,9 @@ const Slider = () => {
               setSlide4(false);
             }}
             moveRight={Slide3 ? true : false}
-            img={img3}
-            position={"chairwoman"}
-            Name={"Asma Hosni"}
+            img={img9}
+            position={"Webmaster"}
+            name={"Nadine Boukadida"}
             num={7}
           ></Slide>
           <Slide
@@ -251,9 +254,9 @@ const Slider = () => {
               setSlide4False();
             }}
             moveRight={Slide3 || Slide4 ? true : false}
-            img={img4}
-            position={"chairwoman"}
-            Name={"Asma Hosni"}
+            img={img3}
+            position={"HR Manager"}
+            name={"Safa Ayed"}
             num={8}
           ></Slide>
         </div>

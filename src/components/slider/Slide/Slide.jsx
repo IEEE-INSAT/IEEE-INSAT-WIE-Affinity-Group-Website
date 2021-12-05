@@ -6,7 +6,7 @@ import "./Slide1.scss";
 
 import img1 from "../../../teampics/pic1.jpg";
 
-const Slide = ({img,Name,position, num , onMouseEnter , moveLeft ,moveRight , onMouseLeave, state}) => {
+const Slide = ({img,name,position, num , onMouseEnter , moveLeft ,moveRight , onMouseLeave, state}) => {
   useEffect(() => {
     const slideImage = document.querySelectorAll(".slidee img");
     slideImage.forEach((e) => {
@@ -32,10 +32,10 @@ const Slide = ({img,Name,position, num , onMouseEnter , moveLeft ,moveRight , on
     <div className={`container-info container-info${num} ${state? `container-info${num}-show`: ""}`}>
     <div className="wrapper-info">
       <div className="wrapper-name">
-         <h1>Name</h1>
+         <h1>{name}</h1>
       </div>
        <div className="wrapper-discription">
-         <h5>Description</h5>
+         <h5>{position}</h5>
        </div>
         
     </div>

@@ -247,10 +247,14 @@
   h1,h5 {
     margin: 5px;
     font-family: campton;
+    word-break: none;
+
   }
   .wrapper-info {
     width: 100%;
     height: 100%;
+    word-break: none;
+
   }
   .wrapper-name {
     display: flex;
@@ -262,16 +266,20 @@
     background-color: #fce8bfbb;
     margin: 0 0 10px 0;
     padding: 0 2px;
+    word-break: none;
 
     h1 {
-      font-size: calc(min(20px , 5vw));
+      font-size: calc(min(16px , 5vw));
+      word-break: none;
+
     }
    
   }
   .wrapper-discription { 
     h5 {
-      font-size: calc(min(18px , 4vw));
+      font-size: calc(min(15px , 4vw));
       padding: 0 2px;
+      word-break: none;
 
     }
     display: flex;
@@ -292,3 +300,13 @@
   .wrapper-discription {
     transform: translate(20%,-10%);}
 }
+@media (max-width:800px) {
+  .container-info{
+    .wrapper-discription { 
+      h5 {
+        font-size: 11px 
+       
+  
+      }
+  }}}
+  

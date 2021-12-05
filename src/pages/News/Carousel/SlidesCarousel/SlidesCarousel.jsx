@@ -1,11 +1,11 @@
 import React, { useEffect ,useState} from "react";
 import "./SlidesCarousel.scss";
-const SlidesCarousel = ({ status, pic, num ,text}) => {
+const SlidesCarousel = ({ status, pic, num ,text, name , changeName}) => {
 var final;
   function getstatus() {
     
     if (status == "show") {
-      
+      changeName(name)
         return `show `;
     }
     if (status == "hide") {

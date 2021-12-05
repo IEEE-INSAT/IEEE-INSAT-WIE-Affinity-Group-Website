@@ -9,6 +9,8 @@ import img4 from "../../teampics/pic5.png";
 import img5 from "../../teampics/pic4.png";
 import img6 from "../../teampics/pic6.jpg";
 import img7 from "../../teampics/pic7.jpg";
+import img8 from "../../teampics/pic8.jpg";
+import img9 from "../../teampics/pic9.svg";
 import "./SliderPhone.scss";
 const SliderPhone = () => {
   const [card1, setcard1] = useState(true);
@@ -84,7 +86,7 @@ const SliderPhone = () => {
         for (let i = 0; i < slides.length; i++) {
           if (
             inViewPort(slides[i]) &&
-            slides[i].getBoundingClientRect().y < window.innerHeight / 2
+            slides[i].getBoundingClientRect().y < window.innerHeight /1.5
           ) {
            
              slides[i].classList.add("show");
@@ -134,31 +136,31 @@ const SliderPhone = () => {
             state={card1}
             img={img1}
             position={"chairwoman"}
-            Name={"Asma Hosni"}
+            name={"Asma Hosni"}
             num={1}
           ></SlidePhone>
 
           <SlidePhone
             state={card2}
-            img={img2}
-            position={"chairwoman"}
-            Name={"Asma Hosni"}
+            img={img8}
+            position={"Vice chairwoman"}
+            name={"Nawres Jouini"}
             num={2}
           ></SlidePhone>
 
           <SlidePhone
             state={card3}
-            img={img3}
-            position={"chairwoman"}
-            Name={"Asma Hosni"}
+            img={img2}
+            position={"General Secretary"}
+            name={"Ilef Maalouch"}
             num={3}
           ></SlidePhone>
 
           <SlidePhone
             state={card4}
             img={img4}
-            position={"chairwoman"}
-            Name={"Asma Hosni"}
+            position={"Treasurer"}
+            name={"Ameni Bchir"}
             num={4}
           ></SlidePhone>
         </div>
@@ -166,32 +168,32 @@ const SliderPhone = () => {
         <div className="second-containere">
           <SlidePhone
             state={card5}
-            img={img7}
-            position={"chairwoman"}
-            Name={"Asma Hosni"}
+            img={img6}
+            position={"Training Manager"}
+            name={"Rania Bouwazra"}
             num={5}
           ></SlidePhone>
 
           <SlidePhone
             state={card6}
-            img={img6}
-            position={"chairwoman"}
-            Name={"Asma Hosni"}
+            img={img7}
+            position={"Media Manager"}
+            name={"Ahmed Cherif"}
             num={6}
           ></SlidePhone>
 
           <SlidePhone
             state={card7}
-            img={img3}
-            position={"chairwoman"}
-            Name={"Asma Hosni"}
+            img={img9}
+            position={"Webmaster"}
+            name={"Nadine Boukadida"}
             num={7}
           ></SlidePhone>
           <SlidePhone
             state={card8}
-            img={img4}
-            position={"chairwoman"}
-            Name={"Asma Hosni"}
+            img={img3}
+            position={"HR Manager"}
+            name={"Safa Ayed"}
             num={8}
           ></SlidePhone>
         </div>
