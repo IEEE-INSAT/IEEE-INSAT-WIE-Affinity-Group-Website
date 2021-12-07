@@ -20,7 +20,7 @@
     }
 
     p {
-      font-size: calc(min(1.1vw, 20px));
+      font-size: calc(min(1.1vw));
     }
     height: fit-content;
     padding: 3%;
@@ -80,7 +80,6 @@ transform: translate(5%);
     bottom: 0%;
     width:30%;
     height: 45%;
-    max-height: 300px;
   }
   #svg7 {
     right: 40%;

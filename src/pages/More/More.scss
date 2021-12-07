@@ -223,3 +223,8 @@
 .up {
   transform: translateY(-10%);
 }
+@media (max-height:500px) and (min-width:810px) {
+  .more-container{
+    height: 145vh !important;
+  }
+}

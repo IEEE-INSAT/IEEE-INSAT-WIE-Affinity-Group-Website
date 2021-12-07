@@ -364,3 +364,19 @@ div {
 .container-cylinder-hide {
     transform: translate(-120vw);
 }
+@media (min-width:2000px) {
+    .container-main .maintitle {
+        font-size: 4vw;
+    }
+    .container-main .secondtitle
+{
+    font-size: 2.375vw;
+}
+    .titles {
+        h1 {
+        font-size: 2.5vw;
+    }}
+    .text{
+    font-size: 1.1vw;
+    }
+}

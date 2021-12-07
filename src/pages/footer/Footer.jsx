@@ -5,7 +5,7 @@ import svgI from "../../svgs/Instagram.svg"
 import svgL from "../../svgs/Linkedinn.svg"
 import wie from "../../pics/wie.png"
 import Rubon from '../../components/Rubon/Rubon'
-
+import {Link} from 'react-scroll'
 import svg from "../../svgs/footer.svg"
 const Footer = () => {
     const [current, setcurrent] = useState("Social Media")
@@ -27,7 +27,7 @@ useEffect(()=> {
     }
     return (
         <div className="footer">
-          
+          <div className="overlayFooter"></div>
                 
 
           <div className="rubonFooter">  <Rubon text=" Thank you for stopping BY ! Thank you for stopping BY ! Thank you for stopping BY ! Thank you for stopping BY !Thank you for stopping BY ! Thank you for stopping BY !Thank you for stopping BY ! Thank you for stopping BY ! Thank you for stopping BY !Thank you for stopping BY !Thank you for stopping BY !Thank you for stopping BY !Thank you for stopping BY !" 
@@ -48,10 +48,24 @@ deg ={0} num ={4}></Rubon></div>
                  <div className="usefulLinks">
                  <h2 className="titlesFooter">Useful Links</h2>
                      <ul className="contactList">
-                         <div className="containlink"><li>Home</li>
-                         <li>Activities</li></div>
-                         <div className="containlink"><li>News</li>
-                         <li>Team</li></div>
+                         <div className="containlink">
+                         <Link to="home" smooth={true} duration={100} offset={-200}>
+                             <li>Home</li>
+</Link>
+<Link to="rubon5" smooth={true} duration={100} offset={-200}>
+                         <li>Activities</li></Link>
+                         
+                         </div>
+
+                         <div className="containlink">
+                         <Link to="rubon1" smooth={true} duration={100} offset={-200}>
+                                        <li>News</li></Link>
+<Link to="rubon7" smooth={true} duration={100} offset={-200}>
+
+                         <li>Team</li>
+</Link>
+                         
+                         </div>
                      </ul>
                  </div>
               

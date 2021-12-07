@@ -31,7 +31,8 @@ body,
   width: 20%;
   transition: 1s all;
   margin: -2.5%;
-  max-height: 270px;
+  // max-height: 270px;
+  height: 45%;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 .slidee:hover {

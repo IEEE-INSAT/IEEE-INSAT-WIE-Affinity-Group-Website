@@ -41,19 +41,21 @@ setnameEvent(name);
     <div  className="container-Latest-Activities">
       <div className="controls">
         <div
-          className="control1 control"
+          className={`control1 control ${slide1==="show"? "color": ""}`}
           onClick={() => {
             changeStatus(1);
           }}
         ></div>
         <div
-          className="control2 control"
+               className={`control2 control ${slide2==="show"? "color": ""}`}
+
           onClick={() => {
             changeStatus(2);
           }}
         ></div>
         <div
-          className="control3 control"
+                    className={`control3 control ${slide3==="show"? "color": ""}`}
+
           onClick={() => {
             changeStatus(3);
           }}
