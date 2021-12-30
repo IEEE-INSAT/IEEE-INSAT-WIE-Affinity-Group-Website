@@ -39,9 +39,9 @@ deg ={0} num ={4}></Rubon></div>
                      <h4>Visit us on our</h4>
                      <span>{current}</span>
                      <ul>
-                         <li onMouseEnter={changeF}> <img src={svgF} alt="" /></li>
-                         <li  onMouseEnter={changeI}> <img src={svgI} alt="" /></li>
-                         <li  onMouseEnter={changeL}> <img src={svgL} alt="" /></li>
+                         <li onMouseEnter={changeF}> <img src={svgF} alt="" /><a href="https://www.facebook.com/IEEE.WIE.INSAT/"></a></li>
+                         <li  onMouseEnter={changeI}> <img src={svgI} alt="" /><a href="https://www.instagram.com/ieee_wie_insat/"></a></li>
+                         <li  onMouseEnter={changeL}> <img src={svgL} alt="" /><a href="https://www.linkedin.com/company/ieee-wie-affinity-group-insat-student-branch/"></a></li>
                      </ul>
                  </div>  
                 

@@ -63,9 +63,12 @@
   width: 100%;
 }
 .textAct {
+  div {
+    width: 90%;
+  }
   font-size: 16px;
   width: 30vw;
-  font-size: 1.4vw;
+  font-size: max (1.2vw , 20px) ;
   padding: 5px;
   font-family: quicksand;
   display: flex;

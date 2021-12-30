@@ -20,7 +20,7 @@ var final;
 
   final = getstatus();
   return <> <img className={`${final}  img${num} elementAct ` } src={pic} alt="" />
-  <div className={`textAct ${status=="show" ? "showtext" : "hidetext"}`}>{text}</div>
+  <div className={`textAct ${status=="show" ? "showtext" : "hidetext"}`}> <div>{text}</div> </div>
 </>};
 
 export default SlidesCarousel;

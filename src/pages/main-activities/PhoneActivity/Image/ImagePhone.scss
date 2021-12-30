@@ -2,12 +2,13 @@
 .container-Activity-Phone {
 
     .elementP-activities.elementP-img {
+opacity: 0;
 top: var(--topHide);
 left: var(--left);
 
 right: var(--right);
 
-opacity: 0;
+
 
 }
 .elementP-activities.elementP-img-show {
