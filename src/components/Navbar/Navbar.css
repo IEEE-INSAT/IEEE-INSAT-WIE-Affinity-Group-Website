@@ -3,7 +3,7 @@
   right: 10%;
   top: 0;
   position: absolute;
-  width: 45px;
+  width: 35px;
   display: none;
   z-index: 999;
   height: 100%;
@@ -15,7 +15,7 @@
 .frame .center .middle:after,
 .frame .center .middle {
   width: 100%;
-  height: 0.22rem;
+  height: 0.19rem;
   background: #fff;
   border-radius: 0.3rem;
   box-shadow: 1px 1px 2px rgba(30, 30, 30, 0.3);

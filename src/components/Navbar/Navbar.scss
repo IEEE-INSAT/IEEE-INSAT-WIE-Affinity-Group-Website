@@ -209,12 +209,14 @@ transform: translate(-150vw,0);
   }
 
   .logo {
-    margin: 10px;
+    margin: 20px;
     font-size: 25px;
     left: 50%;
   }
   .navbar1 {
     justify-content: flex-start;
+    align-items: center;
+    top: 90px;
   }
 }
 
