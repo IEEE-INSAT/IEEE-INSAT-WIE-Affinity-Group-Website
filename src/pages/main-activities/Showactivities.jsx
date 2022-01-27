@@ -13,6 +13,7 @@ import Img from "../../components/img-slide/Img";
 import PhoneActivity from "./PhoneActivity/PhoneActivity";
 const Showactivities = () => {
   function ImagesSlide() {
+ 
     if (window.innerWidth < 800) {
       return (
         <>

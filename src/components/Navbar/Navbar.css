@@ -53,16 +53,16 @@
     transform: translateY(-10px);
   transition: top 0.3s 0.3s, transform 0.3s 0s;
 }
-.frame .center input[type="checkbox"]:checked + .middle {
+.frame.active .center input[type="checkbox"] + .middle {
   transform: rotate(45deg);
   transition: transform 0.3s 0.3s;
 }
-.frame .center input[type="checkbox"]:checked + .middle:before {
+.frame.active .center input[type="checkbox"] + .middle:before {
   bottom: 0;
   transform: rotate(90deg);
   transition: bottom 0.3s 0s, transform 0.3s 0.3s;
 }
-.frame .center input[type="checkbox"]:checked + .middle:after {
+.frame.active .center input[type="checkbox"] + .middle:after {
   top: 0;
   transform: rotate(90deg);
   transition: top 0.3s 0s, transform 0.3s 0.3s;

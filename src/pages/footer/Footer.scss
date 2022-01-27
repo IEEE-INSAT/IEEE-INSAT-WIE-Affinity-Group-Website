@@ -194,6 +194,9 @@ h4 {
     overflow: hidden;
 }
 @media (max-width:800px) {
+  .usefulLinks {
+    display: none !important;
+  }
 .footer {
     .contact {
         ul {

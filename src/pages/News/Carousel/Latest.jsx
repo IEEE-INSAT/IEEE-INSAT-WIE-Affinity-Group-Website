@@ -82,7 +82,7 @@ setnameEvent(name);
               num={1}
               pic={pic1}
               text={
-                "Officiis harum provident quaerat dolore aliquam recusandae ducimus voluptates veniam non reiciendis, facilis vel."
+                "WIE affinity group gave the opportunity to our participants to attend 3 workshops, which are PNL, how to chase job/ internship opportunities and sophrology."
               }
               status={slide1}
             ></SlidesCarousel>
@@ -94,7 +94,7 @@ setnameEvent(name);
 
               pic={pic2}
               text={
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. mollitia quibusdam nobis esfacilis vel."
+                "During this day we had the chance to talk more about IEEE WIE INSAT SBAG and mention our main events as well as our interest’s axis, obviously without forgetting having fun.  "
               }
               status={slide2}
             ></SlidesCarousel>
@@ -104,7 +104,7 @@ setnameEvent(name);
               num={3}
               pic={pic3}
               text={
-                "Lorem ipsum dolarum provident quon reiciendis, mollitia quibusdam nobis est quia nemo ratione, nostrum facilis vel."
+                "The main goal of the Star program is to promote the field of engineering and encourage teenagers to pursue engineering studies. "
               }
               status={slide3}
             ></SlidesCarousel>

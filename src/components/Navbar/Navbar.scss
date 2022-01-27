@@ -34,7 +34,7 @@
   top: 0;
   height: 100px;
   width: 90vw;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.575);
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.575);
 }
 .logo {
   font-family: second;
@@ -92,14 +92,14 @@
   position: absolute;
   top: var(--y);
   left: var(--x);
-  transform: translate(-50%, -50%);
+  // transform: translate(-50%, -50%);
   opacity: 0;
-  background: radial-gradient(
-    circle closest-side,
-    rgba(255, 195, 255, 0.527),
-    transparent
-  );
-  transition: opacity 0.5s ease-out;
+  // background: radial-gradient(
+  //   circle closest-side,
+  //   // rgba(255, 195, 255, 0.527),
+  //   transparent
+  // );
+  transition: all 0.5s ease-out;
 }
 .ul:hover::after {
   opacity: 1;
@@ -147,21 +147,42 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #4f5d7691;
+  background-color: #00000091;
   opacity: 100%;
   z-index: 1;
-  transform: translateY(-110vh);
-  transition: transform 1s;
+transform: translate(-150vw,0);
+  transition: all 1s;
 }
 .mobile-navbar.active {
-  transform: translateY(0);
+  opacity: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translate(0,0);
 }
 
 @media (max-width: 700px) {
+  .navbar1 {
+    .navbar-item.li4{
+      display: none !important;
+    }
+    ul {
+    
+      li::after , .navbar-item::after{
+        content: "";
+        border-bottom: 2px solid rgba(66, 60, 60, 0);
+      }
+      li:hover::after , .navbar-item:hover::after{
+        transform: translateY(0px);
+      }
+      li:hover, .navbar-item:hover{
+        transform: translateY(0px);
+      }
+    }
+  }
+
   .navbar1{
+  
   .navbar-list {
     display: flex;
     align-items: center;
@@ -171,12 +192,13 @@ a {
     height: 70%;
     .navbar-item{
       margin-top: 10px;
-      height: 20%;
+      height: 10%;
       width: 100%;
-      font-size: 20px;
-      background-color: #1c3041;
+      font-size: 20px !important;
+      background-color:#778aa3;
     }
   }}
+
   .navbar {
   
     height: 70px;
@@ -198,6 +220,6 @@ a {
 
 @media (max-width: 960px) {
   li.navbar-item {
-    font-size: 0.62rem;
+    font-size: 16px;
   }
 }

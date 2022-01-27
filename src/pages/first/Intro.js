@@ -31,7 +31,7 @@ const Intro = () => {
              and inspiring girls around the world to follow their academic interests to a career in engineering.</p>
                  <p>The WIE affinity group helps boost the soft skills of students and future engineers by providing a variety of professional trainings, which allows them to test their
                  skills through yearly competitions and teaches them teamwork by integrating them in the IEEE family.
-          (tanséch tbadalha)</p>
+          </p>
 
                      </div>
                     

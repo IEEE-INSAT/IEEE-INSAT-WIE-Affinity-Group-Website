@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import "./Navbar.scss";
 import Team from "../../pages/Team/Team";
@@ -15,7 +15,7 @@ const Navbar = () => {
   const pic = document.getElementsByClassName("pic1");
   const navbar1 = document.getElementsByClassName("navbar1");
   const navBarList = document.getElementsByClassName("navbar-list");
- 
+ const [active, setactive] = useState(false);
   useEffect(() => { if (window.innerWidth < 700) {
     mobileNavbar[0].appendChild(navBarList[0]);
   }
@@ -32,9 +32,9 @@ const Navbar = () => {
     })
   
 
-    checkbox[0].addEventListener("click", () => {
-      mobileNavbar[0].classList.toggle("active");
-    });
+    // checkbox[0].addEventListener("click", () => {
+    //   mobileNavbar[0].classList.toggle("active");
+    // });
   }, []);
 
   window.addEventListener("scroll", function () {
@@ -66,28 +66,31 @@ const Navbar = () => {
       <div className="navbar nav-transform"></div>
 
       <div className="navbar1">
-        <div className="mobile-navbar"> </div>
+        <div className={`mobile-navbar ${active? "active" : ""}`} onClick={()=> {
+          setactive(false)
+        }}> </div>
 
         <h1 className="logo">
           <Link to="home" smooth={true} duration={100} offset={-200}>W.i.e</Link>
         </h1>
 
-        <ul className="ul navbar-list">
-           <li className="navbar-item li3">
-            <Link to="rubon4" smooth={true} duration={200} >Who are Wie</Link>
+        <ul className="ul navbar-list" onClick={()=> {
+          setactive(false)}} >
+           <li className="navbar-item li3" >
+            <Link  onClick={()=> {setactive(false)}} to="rubon4" smooth={true} duration={200} >Who are Wie</Link>
           </li> 
-             <Link to="rubon5" smooth={true} duration={200} offset={-100} className="navbar-item li4">Activities</Link>
-          <Link to="rubon1" smooth={true} duration={200} offset={-80} className="navbar-item li1">News</Link>
+             <Link  onClick={()=> {setactive(false)}} to="rubon5" smooth={true} duration={200} offset={-100} className="navbar-item li4">Activities</Link>
+          <Link  onClick={()=> {setactive(false)}} to="rubon1" smooth={true} duration={200} offset={-80} className="navbar-item li1">News</Link>
           
           <li className="navbar-item li2">
             {" "}
-            <Link to="rubon7" smooth={true} duration={200} offset={-100}>Our Team</Link>
+            <Link  onClick={()=> {setactive(false)}} to="rubon7" smooth={true} duration={200} offset={-100}>Our Team</Link>
           </li>
        
         
         </ul>
 
-        <div class="frame">
+        <div class={`frame ${active? "active" : ""}`} onClick={()=> {setactive(!active)}}>
           <div class="center">
             <input className="navcheck" type="checkbox" />
             <div class="middle"></div>

@@ -34,21 +34,27 @@ const News = () => {
                 num={2}
                 current={current}
                 title="Visits"
-                text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit atque eligendi at delectus quod hic illo molestias nulla dolore adipisci? Incidunt beatae possimus quibusdam reiciendis quis optio ipsam dolores deleniti? "
+                text="WIE INSAT organizes multiple visits throughout the year to different places in Tunisia, hospital visits, and educational visits.
+                like the JED event for example where we help integrate children in the engineering field and add more options to their future careers choices.
+                
+                "
               ></Element>
             </SwiperSlide>
             <SwiperSlide>
               <Element
                 num={1}
                 title="Workshops"
-                text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit atque eligendi at delectus quod hic illo molestias nulla dolore adipisci? Incidunt beatae possimus quibusdam reiciendis quis optio ipsam dolores deleniti? "
+                text="Workshops ? we have that too !! WIE INSAT organizes soft skills workshops like chasing opportunities, leadership.. and a lot more
+                We try our best to leave an impact by engaging more people with fun activities in different fields. 
+                "
               ></Element>
             </SwiperSlide>
             <SwiperSlide>
               <Element
                 num={3}
-                title="Visits"
-                text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit atque eligendi at delectus quod hic illo molestias nulla dolore adipisci? Incidunt beatae possimus quibusdam reiciendis quis optio ipsam dolores deleniti? "
+                title="Team Buildings"
+                text="WIE INSAT values the relationship with its members so we try to always gather and spend time together.
+                - multiple meetings are being held every week to track the workflow."
               ></Element>
             </SwiperSlide>
             <SwiperSlide>
