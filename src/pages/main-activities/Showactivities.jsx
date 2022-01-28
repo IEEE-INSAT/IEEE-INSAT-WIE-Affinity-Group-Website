@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Showactivities.scss";
 import pic1 from "../../pics/31.jpg";
 import pic2 from "../../pics/41.jpg";
@@ -12,6 +12,13 @@ import svg3 from "../../svgs/3.svg";
 import Img from "../../components/img-slide/Img";
 import PhoneActivity from "./PhoneActivity/PhoneActivity";
 const Showactivities = () => {
+ const [done, setdone] = useState(true);
+  window.addEventListener("resize", ()=> {
+    if (window.innerWidth<800 && done) {
+      window.location.reload(false);
+      setdone(false)
+    }
+  })
   function ImagesSlide() {
  
     if (window.innerWidth < 800) {
