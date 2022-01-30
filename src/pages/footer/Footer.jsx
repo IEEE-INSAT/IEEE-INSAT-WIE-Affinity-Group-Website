@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import "./Footer.scss"
 import svgF from "../../svgs/facebook.svg"
-import svgI from "../../svgs/Instagram.svg"
+import svgI from "../../svgs/instagram.svg"
 import svgL from "../../svgs/Linkedinn.svg"
-import wie from "../../pics/wie.png"
 import Rubon from '../../components/Rubon/Rubon'
 import {Link} from 'react-scroll'
 import svg from "../../svgs/footer.svg"
