@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Rubon from "../../../components/Rubon/Rubon";
 import "./Latest.scss";
-import pic1 from "../../../pics/1.jpg";
-import pic2 from "../../../pics/2.jpg";
-import pic3 from "../../../pics/3.jpg";
+import pic1 from "../../../pics/6new.png";
+import pic2 from "../../../pics/5new.jpg";
+import pic3 from "../../../pics/3new.jpg";
 
 import SlidesCarousel from "./SlidesCarousel/SlidesCarousel";
 const Latest = () => {
@@ -76,13 +76,13 @@ setnameEvent(name);
           <div className="filler"></div>
           <div className={` container-imgLatest`}>
             <SlidesCarousel
-              name="Summer School"
+              name="ML Hackathon"
 
             changeName={changeName}
               num={1}
               pic={pic1}
               text={
-                "WIE affinity group gave the opportunity to our participants to attend 3 workshops, which are PNL, how to chase job/ internship opportunities and sophrology."
+                " Don't miss the opportunity to meet students from other universities in order to create new connections and build a bigger Network !"
               }
               status={slide1}
             ></SlidesCarousel>
@@ -94,17 +94,17 @@ setnameEvent(name);
 
               pic={pic2}
               text={
-                "During this day we had the chance to talk more about IEEE WIE INSAT SBAG and mention our main events as well as our interest’s axis, obviously without forgetting having fun.  "
+                "the WIE AG mobilized on Sunday 5th Dec 2021, at district 'Ettahrir', in order to teach scouts the basics of cybersecurity"
               }
               status={slide2}
             ></SlidesCarousel>
             <SlidesCarousel
             changeName={changeName}
-              name="Star Program"
+              name="October rose"
               num={3}
               pic={pic3}
               text={
-                "The main goal of the Star program is to promote the field of engineering and encourage teenagers to pursue engineering studies. "
+                "Your donations brought a glimmer of hope to a lot of children during our latest visit where a smile was made on each face "
               }
               status={slide3}
             ></SlidesCarousel>

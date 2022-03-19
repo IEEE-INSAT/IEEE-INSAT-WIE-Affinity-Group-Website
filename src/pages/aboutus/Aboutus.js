@@ -1,7 +1,7 @@
 import React from "react";
 import "./Aboutus.css";
 import "./aboutus.scss";
-import Footer from "../footer/Footer";
+import Footer from "../Footer/Footer";
 import Intro from "../first/Intro";
 import News from "../News/News";
 import More from "../More/More";

@@ -5,6 +5,11 @@ import pic2 from "../../pics/41.jpg";
 import pic3 from "../../pics/5.png";
 import pic4 from "../../pics/2.jpg";
 import pic5 from "../../pics/4.jpg";
+import pic11 from "../../pics/1new.jpg";
+import pic21 from "../../pics/2new.jpg";
+import pic31 from "../../pics/3new.jpg";
+import pic41 from "../../pics/4new.jpg";
+import pic51 from "../../pics/5new.jpg";
 import Rubon from "../../components/Rubon/Rubon";
 import svg1 from "../../svgs/1.svg";
 import svg2 from "../../svgs/2.svg";
@@ -31,13 +36,13 @@ const Showactivities = () => {
       return (
         <>
           
-          <Img pic={pic1} num={1} top={100} />
+          <Img pic={pic11} num={1} top={100} />
             <Img pic={pic2} num={2} top={170} right={5} />
-            <Img pic={pic3} num={3} top={209} right={21} />
+            <Img pic={pic31} num={3} top={209} right={21} />
             <Img pic={pic4} num={4} top={340} right={-1} />
             <Img pic={pic1} num={5} top={332} right={42} />
             <Img pic={pic5} num={7} top={270} right={45}  />
-            <Img pic={pic2} num={8} top={n} left={10} />
+            <Img pic={pic51} num={8} top={n} left={10} />
         </>
       );
     }
